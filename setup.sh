@@ -6,6 +6,7 @@ echo "Backing up old files..."
 [ -f ".tmux.conf" ] && mv .tmux.conf .tmux.conf.bak
 [ -f ".vimrc" ] && mv .vimrc .vimrc.bak
 [ -f ".vim" ] && mv .vim .vim.bak
+[ -f ".tmux-themepack" ] && mv .tmux-themepack .tmux-themepack.bak
 
 # Clone repos
 echo "Cloning dotfiles repo..."
