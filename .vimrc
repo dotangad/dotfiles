@@ -1,12 +1,3 @@
-" make vim great again
-set nocompatible
-
-" don’t show the intro message when starting vim
-set shortmess=atI
-
-" start scrolling three lines before the horizontal window border
-set scrolloff=3
-
 " enable syntax highlighting
 syntax enable
 
@@ -15,9 +6,13 @@ set timeoutlen=1000 ttimeoutlen=10
 
 " set visual spaces in a tab
 set tabstop=2
-
 " set the number of spaces in a tab while editing
 set softtabstop=2
+set expandtab
+set shiftwidth=2
+set autoindent
+set smartindent
+set cindent
 
 " enable backups in /tmp
 set backup
@@ -29,14 +24,14 @@ set writebackup
 " show line numbers
 set number
 
-" go one character beyond the end of a line
-set virtualedit+=onemore
+" \ is too far away to be the leader
+let mapleader=","
 
 " better tab switching
-map <leader>h :tabr<cr>
-map <leader>l :tabl<cr>
-map <leader>j :tabp<cr>
-map <leader>k :tabn<cr>
+map <leader>h :wincmd h<cr>
+map <leader>l :wincmd l<cr>
+map <leader>j :wincmd j<cr>
+map <leader>k :wincmd k<cr>
 
 " show the last used command in the bottom right
 set showcmd
@@ -44,7 +39,7 @@ set showcmd
 " enable language specific indents from indent files in ~/.vim/indent/
 filetype indent on
 
-" visual autocompleting for the command menu
+" visual autocompletion for the command menu
 set wildmenu
 
 " highlight matching brackets [{()}]
@@ -67,16 +62,6 @@ nnoremap <Up> gk
 nnoremap B ^
 nnoremap E $
 
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
-
-" highlight last inserted text
-nnoremap gV `[v`]
-
-" \ is too far away to be the leader
-let mapleader=","
-
 " jk is escape
 inoremap jk <esc>
 
@@ -90,14 +75,29 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/goyo.vim'
-Plug 'pangloss/vim-javascript' 
-Plug 'leafgarland/typescript-vim' 
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'yegappan/mru'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'mattn/emmet-vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
+
+" Extra stuff for emmet
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+" Tell syntastic what eslint binary to usele
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 " set dark mode in terminal, light in gvim or macvim
 if has("gui_running")
@@ -110,10 +110,32 @@ endif
 let NERDTreeShowHidden=1
 
 " comma-g toggles Goyo
-nnoremap <silent> <leader>z :Goyo<cr>
+nnoremap <silent> <leader>g :Goyo<cr>
 
 " comma-r toggles Most Recently Used
 nnoremap <silent> <leader>r :MRU<cr>
 
 " comma-t toggles NERDTree
 nnoremap <silent> <leader>t :NERDTreeToggle<cr>
+
+" comma-m saves the file
+nnoremap <silent> <leader>q :q<cr>
+nnoremap <silent> <leader>w :w<cr>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Use goimports instead of gofmt for formatting
+let g:go_fmt_command = "goimports"
+
+" TODO
+" Setup vim for JavaScript - prettier, eslint
