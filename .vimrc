@@ -96,9 +96,16 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'mattn/emmet-vim'
 Plug 'leshill/vim-json'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mkitt/tabline.vim'
+Plug 'jreybert/vimagit'
 " Real-time linting and code fixing
 Plug 'w0rp/ale'
 call plug#end()
+
+" Enable tabline
+let g:airline#extensions#tabline#enabled = 1
+" Use better glyphs
+let g:airline_powerline_fonts = 1
 
 " Show hidden files in ctrl-p
 let g:ctrlp_show_hidden = 1
@@ -132,7 +139,7 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 " comma-g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
 " comma-r toggles Most Recently Used
-nnoremap <silent> <leader>r :MRU<cr>
+nnoremap <silent> <leader>r :MRU<CR>
 
 " Use goimports instead of gofmt for formatting
 let g:go_fmt_command = "goimports"
