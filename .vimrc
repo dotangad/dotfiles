@@ -98,6 +98,8 @@ Plug 'leshill/vim-json'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mkitt/tabline.vim'
 Plug 'jreybert/vimagit'
+" Auto close brackets
+Plug 'jiangmiao/auto-pairs'
 " Real-time linting and code fixing
 Plug 'w0rp/ale'
 call plug#end()
@@ -106,6 +108,8 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1
 " Use better glyphs
 let g:airline_powerline_fonts = 1
+" Change theme
+let g:airline_theme = 'dracula'
 
 " Show hidden files in ctrl-p
 let g:ctrlp_show_hidden = 1
