@@ -1,6 +1,9 @@
 " dotangad's vimrc
 " Available at https://github.com/dotangad/dotfiles
 
+" Death to vi 
+set nocompatible
+
 " Enable file specific syntax highlighting
 syntax enable
 filetype indent on
@@ -18,6 +21,9 @@ set expandtab
 set autoindent
 set smartindent
 set cindent
+
+" Press q to exit help mode
+au FileType help nnoremap <buffer> q :q<CR>
 
 " Enable backups in /tmp
 set backup
@@ -98,6 +104,9 @@ Plug 'leshill/vim-json'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mkitt/tabline.vim'
 Plug 'jreybert/vimagit'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'posva/vim-vue'
+Plug 'dart-lang/dart-vim-plugin'
 " Auto close brackets
 Plug 'jiangmiao/auto-pairs'
 " Real-time linting and code fixing
@@ -118,6 +127,7 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --follow
   \ -g ""'
 
 " Tab to activate emmet, make it work with jsx
+au Filetype javascript nnoremap ,e :Emmet 
 let g:user_emmet_leader_key = '<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
@@ -151,7 +161,7 @@ let g:go_fmt_command = "goimports"
 " ALE settings
 let g:ale_change_sign_column_color = 1
 " Fix files with prettier, and then eslint.
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 " Fix files on save 
 let g:ale_fix_on_save = 1
 let b:ale_linters = {'javascript': ['eslint']}
