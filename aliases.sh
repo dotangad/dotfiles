@@ -1,5 +1,9 @@
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias g='git'
+alias g='hub'
 alias la="ls -la"
 alias rc="source $HOME/.zshrc"
 alias td=todolist
+alias startApache='/Applications/MAMP/bin/startApache.sh'
+alias stopApache='/Applications/MAMP/bin/stopApache.sh'
+alias startMysql='/Applications/MAMP/bin/startMysql.sh'
+alias stopMysql='/Applications/MAMP/bin/stopMysql.sh'
