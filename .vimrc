@@ -5,8 +5,9 @@
 set nocompatible
 
 " Enable file specific syntax highlighting
-syntax enable
-filetype indent on
+syntax off
+" syntax enable
+" filetype indent on
 
 " Remove delays while switching modes
 set timeoutlen=1000 ttimeoutlen=10
@@ -17,7 +18,7 @@ let mapleader = ","
 " Setup indentation, two spaces
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+" set expandtab
 set autoindent
 set smartindent
 set cindent
@@ -95,7 +96,7 @@ Plug 'yegappan/mru'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -110,15 +111,15 @@ Plug 'dart-lang/dart-vim-plugin'
 " Auto close brackets
 Plug 'jiangmiao/auto-pairs'
 " Real-time linting and code fixing
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 call plug#end()
 
 " Enable tabline
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 " Use better glyphs
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 " Change theme
-let g:airline_theme = 'dracula'
+" let g:airline_theme = 'dracula'
 
 " Show hidden files in ctrl-p
 let g:ctrlp_show_hidden = 1
@@ -159,16 +160,16 @@ nnoremap <silent> <leader>r :MRU<CR>
 let g:go_fmt_command = "goimports"
 
 " ALE settings
-let g:ale_change_sign_column_color = 1
+" let g:ale_change_sign_column_color = 1
 " Fix files with prettier, and then eslint.
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+" let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 " Fix files on save 
-let g:ale_fix_on_save = 1
-let b:ale_linters = {'javascript': ['eslint']}
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-let g:ale_set_highlights = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_echo_msg_error_str = 'e'
-let g:ale_echo_msg_warning_str = 'w'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_fix_on_save = 1
+" let b:ale_linters = {'javascript': ['eslint']}
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+" let g:ale_set_highlights = 1
+" let g:airline#extensions#ale#enabled = 1
+" let g:ale_echo_msg_error_str = 'e'
+" let g:ale_echo_msg_warning_str = 'w'
+" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
