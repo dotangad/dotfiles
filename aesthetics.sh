@@ -6,4 +6,4 @@ export CLICOLOR=1;
 unset RPROMPT;
 unset PROMPT;
 setopt prompt_subst;
-export PROMPT="$fg[none]%m:$fg[cyan]$(get_pwd) $fg[none]%n$ ";
+export PROMPT="%m:%1d %n$ ";
