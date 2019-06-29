@@ -5,11 +5,9 @@ echo "Backing up old files..."
 [ -f ".tmux.conf" ] && mv .tmux.conf .tmux.conf.bak
 [ -f ".vimrc" ] && mv .vimrc .vimrc.bak
 [ -d ".vim" ] && mv .vim .vim.bak
-[ -d ".tmux-themepack" ] && mv .tmux-themepack .tmux-themepack.bak
 
 echo "Cloning dotfiles repo..."
 git clone https://github.com/dotangad/dotfiles dotfiles
-git clone https://github.com/jimeh/tmux-themepack .tmux-themepack
 
 echo "Symlinking files..."
 ln -s dotfiles/.zshrc .zshrc
