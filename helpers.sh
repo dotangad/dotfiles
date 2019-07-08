@@ -29,3 +29,7 @@ get_pwd() {
   echo "${PWD/$HOME/~}"
   # echo "${PWD##*/}"
 }
+
+clone() {
+	git clone https://github.com/$1;
+}
