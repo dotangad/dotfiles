@@ -9,11 +9,7 @@ alias startMysql="/Applications/MAMP/bin/startMysql.sh"
 alias stopMysql="/Applications/MAMP/bin/stopMysql.sh"
 alias mysql="/Applications/MAMP/Library/bin/mysql"
 
-alias gaa="git add --all"
-alias gst="git status"
-alias gp="git push"
-alias gcmsg="git commit -m"
-
+alias g = "git"
 alias pcpy="pwd | pbcopy"
 
 func colours () {
