@@ -1,4 +1,0 @@
-arzzen/calc.plugin.zsh
-djui/alias-tips
-denysdovhan/spaceship-prompt
-caarlos0/ports kind:path

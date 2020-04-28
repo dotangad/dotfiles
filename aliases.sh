@@ -7,19 +7,14 @@ alias startApache="/Applications/MAMP/bin/startApache.sh"
 alias stopApache="/Applications/MAMP/bin/stopApache.sh"
 alias startMysql="/Applications/MAMP/bin/startMysql.sh"
 alias stopMysql="/Applications/MAMP/bin/stopMysql.sh"
+alias mysql="/Applications/MAMP/Library/bin/mysql"
 
-alias gohome="cd /Users/dotangad/code/go/src/github.com/dotangad/"
-
-alias g="hub"
 alias gaa="git add --all"
 alias gst="git status"
 alias gp="git push"
-func gcmsg () {
-	git commit -m $1;
-}
-func gpu () {
-	git push -u $1 $2;
-}
+alias gcmsg="git commit -m"
+
+alias pcpy="pwd | pbcopy"
 
 func colours () {
 	for i in {0..255}; do;

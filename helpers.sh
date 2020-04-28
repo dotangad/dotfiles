@@ -33,3 +33,7 @@ get_pwd() {
 clone() {
 	git clone https://github.com/$1;
 }
+
+hoi() {
+	osascript -e "tell application \"HazeOver\" to set intensity to $1"
+}
