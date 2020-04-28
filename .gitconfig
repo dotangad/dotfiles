@@ -1,0 +1,20 @@
+[user]
+	name = Angad Singh
+	email = mail@angad.dev
+	signingkey = C5F1EFCD5D5AD58CB569193524B5C4479B808D6B
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
+[alias]
+  co = checkout
+  c = commit -m
+	caa = commit -am
+	aa = add --all
+  s = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+	l = log --oneline
+	last = log -1
