@@ -1,0 +1,20 @@
+{
+  "name": "hypercwd",
+  "version": "1.4.0",
+  "description": "Open a Hyper tab with the same directory as the current tab",
+  "main": "index.js",
+  "keywords": [
+    "hyper",
+    "cwd"
+  ],
+  "author": "Harrison Harnisch <hharnisc@gmail.com> (http://hharnisc.github.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hharnisc/hypercwd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hharnisc/hypercwd/issues"
+  },
+  "homepage": "https://github.com/hharnisc/hypercwd#readme"
+}

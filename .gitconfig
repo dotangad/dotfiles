@@ -1,20 +1,23 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = C5F1EFCD5D5AD58CB569193524B5C4479B808D6B
+	signingkey = F0DE47D13CE03B51B4405D4B98038C151AA2B9E6
 [gpg]
 	program = gpg
 [commit]
 	gpgsign = true
 [alias]
-  co = checkout
-  c = commit -m
+	co = checkout
+	c = commit -m
 	caa = commit -am
 	aa = add --all
-  s = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+	s = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
 	l = log --oneline
 	last = log -1
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[credential]
+	helper = osxkeychain
