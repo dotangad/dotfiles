@@ -16,7 +16,7 @@ source $HOME/dotfiles/helpers.sh
 source $HOME/dotfiles/aliases.sh
 source $HOME/dotfiles/newuser.sh
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # autoload -U promptinit; promptinit
 # prompt pure

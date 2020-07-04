@@ -4,6 +4,8 @@
 
 module.exports = {
   config: {
+    // https://github.com/vercel/hyper/issues/330#issuecomment-276880932
+    modifierKeys: { altIsMeta: true },
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
