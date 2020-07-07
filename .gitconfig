@@ -1,7 +1,7 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = F0DE47D13CE03B51B4405D4B98038C151AA2B9E6
+	signingkey = 0565722437EDC182327094965215BE6B38DCDE61
 [gpg]
 	program = gpg
 [commit]
@@ -21,3 +21,5 @@
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 [credential]
 	helper = osxkeychain
+[color]
+	ui = auto
