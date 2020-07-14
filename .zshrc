@@ -16,7 +16,12 @@ source $HOME/dotfiles/helpers.sh
 source $HOME/dotfiles/aliases.sh
 source $HOME/dotfiles/newuser.sh
 
+# FZF stuff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # autoload -U promptinit; promptinit
 # prompt pure
