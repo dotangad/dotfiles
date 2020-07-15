@@ -13,13 +13,13 @@ font:
   size: 14
 
   normal:
-    family: 'Fantasque Sans Mono'
+    family: 'FantasqueSansMono Nerd Font'
     style: Regular
   bold:
-    family: 'Fantasque Sans Mono'
+    family: 'FantasqueSansMono Nerd Font'
     style: Bold
   italics:
-    family: 'Fantasque Sans Mono'
+    family: 'FantasqueSansMono Nerd Font'
     style: Italic
 
   offset:
