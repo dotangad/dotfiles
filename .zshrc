@@ -27,7 +27,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # autoload -U promptinit; promptinit
 # prompt pure
 # eval "$(starship init zsh)"
-PROMPT="yeet %B%F{124}::%f %F{34}~/%c%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b "
+source $HOME/dotfiles/shrink_path.zsh
+setopt prompt_subst
+PS1='%n %B%F{124}::%f %F{34}$(shrink_path -f)%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b '
 
 
 # GPG ioctl error
