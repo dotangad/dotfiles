@@ -3,10 +3,10 @@ export LANG=en_US.UTF-8
 # Emacs keybindings
 bindkey -e
 
-export GOPATH="$HOME/code/go"
-export GOBIN="$HOME/code/go/bin"
+export GOPATH="$HOME/src/go"
+export GOBIN="$HOME/src/go/bin"
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 export PATH="$HOME/flutter/bin:/usr/local/bin:$GOBIN:/usr/local/sbin:$HOME/.ghcup/bin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$HOME/bin/node:$PATH"
@@ -19,7 +19,7 @@ source $HOME/dotfiles/newuser.sh
 # FZF stuff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --ignore-case --hidden --type f'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 

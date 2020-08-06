@@ -10,16 +10,19 @@ env:
   TERM: xterm-256color
 
 font:
-  size: 14
+  size: 13
 
   normal:
-    family: 'FantasqueSansMono Nerd Font'
+    # family: 'Rec Mono Linear'
+    family: 'FantasqueSansMono Nerd Font Regular'
     style: Regular
   bold:
-    family: 'FantasqueSansMono Nerd Font'
+    # family: 'Rec Mono Linear'
+    family: 'FantasqueSansMono Nerd Font Regular'
     style: Bold
   italics:
-    family: 'FantasqueSansMono Nerd Font'
+    # family: 'Rec Mono Linear'
+    family: 'FantasqueSansMono Nerd Font Regular'
     style: Italic
 
   offset:

@@ -1,4 +1,3 @@
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias la="ls -la"
 alias rc="source $HOME/.zshrc"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -11,7 +10,7 @@ alias stopMysql="/Applications/MAMP/bin/stopMysql.sh"
 alias mysql="/Applications/MAMP/Library/bin/mysql"
 
 alias g="git"
-alias pcpy="pwd | pbcopy"
+alias p="pwd | pbcopy"
 
 func colours () {
 	for i in {0..255}; do;
