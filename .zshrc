@@ -1,4 +1,5 @@
 export LANG=en_US.UTF-8
+export TERM=xterm-256color
 
 # Emacs keybindings
 bindkey -e
@@ -25,7 +26,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # autoload -U promptinit; promptinit
 # prompt pure
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+PROMPT="yeet %B%F{124}::%f %F{34}~/%c%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b "
+
 
 # GPG ioctl error
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
