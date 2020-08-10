@@ -29,7 +29,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # eval "$(starship init zsh)"
 source $HOME/dotfiles/shrink_path.zsh
 setopt prompt_subst
-PS1='%n %B%F{124}::%f %F{34}$(shrink_path -f)%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b '
+PS1='moose? %B%F{124}::%f %F{34}$(shrink_path -f)%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b '
 
 
 # GPG ioctl error
