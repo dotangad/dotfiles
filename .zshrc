@@ -45,4 +45,10 @@ export GPG_TTY
 # else
 #     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 # fi
+
+# GHC stuff
 [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+# OPAM stuff
+test -r /Users/dotangad/.opam/opam-init/init.zsh && . /Users/dotangad/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
