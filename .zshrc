@@ -24,12 +24,20 @@ export FZF_DEFAULT_COMMAND='fd --ignore-case --hidden --type f'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# autoload -U promptinit; promptinit
-# prompt pure
-# eval "$(starship init zsh)"
+# Prompt
 source $HOME/dotfiles/shrink_path.zsh
 setopt prompt_subst
-PS1='λ %B%F{124}::%f %F{34}$(shrink_path -f)%f %(?..%F{124}1 )%F{69}%(!.#.>>)%f%b '
+PROMPT_USERNAME='λ'
+PROMPT_COLONS='%B%F{124}::%f%b'
+PROMPT_DIRPATH='%B%F{34}$(shrink_path -f)%f%b'
+PROMPT_RETCODE='%B%(?..%F{124}1%f )%b'
+PROMPT_ANGLEBRACK='%B%F{69}%(!.#.>>)%f%b'
+# TODO: add git branch indicator
+PROMPT="$PROMPT_USERNAME "
+PROMPT+="$PROMPT_COLONS "
+PROMPT+="$PROMPT_DIRPATH "
+PROMPT+="$PROMPT_RETCODE"
+PROMPT+="$PROMPT_ANGLEBRACK "
 
 
 # GPG ioctl error
