@@ -21,23 +21,17 @@ set PATH $HOME/.config/yarn/global/node_modules/.bin $PATH
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
 set GPG_TTY (tty)
 
-# GPG commit signing
-# https://medium.com/@timmywil/sign-your-commits-on-github-with-gpg-566f07762a43
-# if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-#     source ~/.gnupg/.gpg-agent-info
-#     export GPG_AGENT_INFO
-# else
-#     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
-# fi
-
-# GHC stuff
-# [ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
-
-# OPAM stuff
-test -r /Users/dotangad/.opam/opam-init/init.fish && . /Users/dotangad/.opam/opam-init/init.fish > /dev/null 2> /dev/null || true
-
 source ~/dotfiles/aliases.sh
 
 function rc
   source ~/.config/fish/config.fish
+end
+
+set -g fisher_path $HOME/.fish_plugins
+
+set -p fish_function_path fish_function_path[1] $fisher_path/functions
+set -p fish_complete_path fish_complete_path[1] $fisher_path/completions
+
+for file in $fisher_path/conf.d/*.fish
+    builtin source $file 2>/dev/null
 end
