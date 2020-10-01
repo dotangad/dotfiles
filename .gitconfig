@@ -1,7 +1,7 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = 0565722437EDC182327094965215BE6B38DCDE61
+	signingkey = 5215BE6B38DCDE61
 [gpg]
 	program = gpg
 [commit]
