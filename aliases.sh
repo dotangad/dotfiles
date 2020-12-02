@@ -11,4 +11,5 @@ alias mysql="/Applications/MAMP/Library/bin/mysql"
 
 alias g="git"
 alias p="pwd | pbcopy"
+alias g++="g++-10"
 

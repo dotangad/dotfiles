@@ -15,10 +15,16 @@ backup() {
 	[ -h $FILENAME ] && move $FILENAME
 }
 
-symlink() {
+symlinkhome() {
 	FILENAME=$1
 
 	ln -s dotfiles/$FILENAME $FILENAME
+}
+
+symlinkconfig() {
+	FILENAME=$1
+
+	ln -s dotfiles/$FILENAME .config/$FILENAME
 }
 
 backup dotfiles
@@ -26,14 +32,18 @@ backup .zshrc
 backup .alacritty.yml
 backup .gitconfig
 backup .tmux.conf
+backup .config/fish
+backup .config/lf
 
 echo "cloning dotfiles repo...\n"
 git clone https://github.com/dotangad/dotfiles dotfiles
 
 echo "symlinking files...\n"
-symlink .zshrc
-symlink .alacritty.yml
-symlink .gitconfig
-symlink .tmux.conf
+symlinkhome .zshrc
+symlinkhome .alacritty.yml
+symlinkhome .gitconfig
+symlinkhome .tmux.conf
+symlinkconfig fish
+symlinkconfig lf
 
 echo "done"
