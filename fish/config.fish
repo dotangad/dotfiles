@@ -12,6 +12,7 @@ set PATH $GOBIN $PATH
 set PATH /usr/local/sbin $PATH
 set PATH $HOME/.ghcup/bin $PATH
 set PATH $HOME/.local/bin $PATH
+set PATH $HOME/dotfiles/scripts $PATH
 set PATH $HOME/bin $PATH
 set PATH $HOME/bin/node $PATH
 set PATH $HOME/.yarn/bin $PATH
