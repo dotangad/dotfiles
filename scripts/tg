@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# get the environment vars
+source `dirname $0`/../secrets.sh
+
+# enpoint url
+API_URL="https://api.telegram.org/bot$TG_BOT_API_KEY/sendMessage"
+
+# post body
+post_request_body="{ \"chat_id\": \"$TG_MY_CHAT_ID\", \"text\": \"$1\", \"parse_mode\": \"MarkdownV2\", \"disable_web_page_preview\": true }"
+
+# finally post
+curl -H "Content-Type: application/json" \
+  -X POST \
+  -d "$post_request_body" \
+  $API_URL
