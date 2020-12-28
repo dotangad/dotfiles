@@ -1,3 +1,4 @@
 .DS_Store
 .vim/plugged
 .hyper_plugins
+secrets.sh
