@@ -13,3 +13,5 @@ alias g="git"
 alias p="pwd | pbcopy"
 alias g++="g++-10"
 
+alias n="notes"
+alias ns="notes -s"
