@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+console.log(
+  require("crypto")
+    .randomBytes(parseInt(process.argv[2]) || 15)
+    .toString("hex")
+);
