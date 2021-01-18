@@ -45,5 +45,6 @@ symlinkhome .gitconfig
 symlinkhome .tmux.conf
 symlinkconfig fish
 symlinkconfig lf
+symlinkconfig kitty
 
 echo "done"
