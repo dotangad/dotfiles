@@ -1,19 +1,26 @@
+function __notes_pushd_notes
+  if test (pwd) != $HOME"/notes"
+    pushd ~/notes
+  end
+end
+
+function __notes_create_note
+  set title ""
+  for x in $argv[1..(count $argv)]
+    set title $title" "$x
+  end
+  set note_file (date +%Y-%m-%d)""$title".md"
+  nvim $note_file
+  set -e note_file
+  set -e title
+end
+
 function notes
+  __notes_pushd_notes
   if test (count $argv) -lt 1
-    if test (pwd) != $HOME"/notes"
-      pushd ~/notes
-    end
   else if test $argv[1] = "-t"
-    if test (pwd) != $HOME"/notes"
-      pushd ~/notes
-    end
-    set note_file (date +%Y-%m-%d)".md"
-    nvim $note_file
-    set -e note_file
+    __notes_create_note
   else if test $argv[1] = "-s"
-    if test (pwd) != $HOME"/notes"
-      pushd ~/notes
-    end
     # Pass all of stdin as one argument
     # https://unix.stackexchange.com/questions/91596/make-xargs-pass-as-first-parameter
     if test (count $argv) -gt 1
@@ -38,12 +45,7 @@ function notes
       set -e raw
     end
   else 
-    if test (pwd) != $HOME"/notes"
-      pushd ~/notes
-    end
-    set note_file (date +%Y-%m-%d)" "$argv[1..(count $argv)]".md"
-    nvim $note_file
-    set -e note_file
+    __notes_create_note $argv[1..(count $argv)]
   end
 end
 
