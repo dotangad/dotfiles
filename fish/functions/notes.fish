@@ -4,11 +4,17 @@ function __notes_pushd_notes
   end
 end
 
-function __notes_create_note
-  set title ""
+function __notes_concatenate
+  set result ""
   for x in $argv[1..(count $argv)]
-    set title $title" "$x
+    set result $result" "$x
   end
+  echo $result
+  set -e result
+end
+
+function __notes_create_note
+  set title (__notes_concatenate $argv[1..(count $argv)])
   set note_file (date +%Y-%m-%d)""$title".md"
   nvim $note_file
   set -e note_file
@@ -21,29 +27,21 @@ function notes
   else if test $argv[1] = "-t"
     __notes_create_note
   else if test $argv[1] = "-s"
-    # Pass all of stdin as one argument
-    # https://unix.stackexchange.com/questions/91596/make-xargs-pass-as-first-parameter
+    set raw ""
     if test (count $argv) -gt 1
-      set raw (fzf --print-query -1 -q $argv[2])
-      if test (count $raw) -gt 1
-        nvim $raw[2]
-      else
-        set note_file (date +%Y-%m-%d)" "$raw[1]".md"
-        nvim $note_file
-        set -e note_file
-      end
-      set -e raw
+      set query (__notes_concatenate $argv[2..(count $argv)])
+      set raw (fzf --print-query -1 -q $query)
+      set -e query
     else
       set raw (fzf --print-query)
-      if test (count $raw) -gt 1
-        nvim $raw[2]
-      else
-        set note_file (date +%Y-%m-%d)" "$raw[1]".md"
-        nvim $note_file
-        set -e note_file
-      end
-      set -e raw
     end
+
+    if test (count $raw) -gt 1
+      nvim $raw[2]
+    else
+      __notes_create_note " "$raw[1]
+    end
+    set -e raw
   else 
     __notes_create_note $argv[1..(count $argv)]
   end
