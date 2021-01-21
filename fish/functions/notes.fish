@@ -29,7 +29,7 @@ function notes
   else if test $argv[1] = "-s"
     set raw ""
     if test (count $argv) -gt 1
-      set query (__notes_concatenate $argv[2..(count $argv)])
+      set query (__notes_concatenate $argv[2..(count $argv)] | xargs)
       set raw (fzf --print-query -1 -q $query)
       set -e query
     else
@@ -39,7 +39,7 @@ function notes
     if test (count $raw) -gt 1
       nvim $raw[2]
     else
-      __notes_create_note " "$raw[1]
+      __notes_create_note $raw[1]
     end
     set -e raw
   else 
