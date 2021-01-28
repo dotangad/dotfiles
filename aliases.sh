@@ -7,7 +7,6 @@ alias startApache="/Applications/MAMP/bin/startApache.sh"
 alias stopApache="/Applications/MAMP/bin/stopApache.sh"
 alias startMysql="/Applications/MAMP/bin/startMysql.sh"
 alias stopMysql="/Applications/MAMP/bin/stopMysql.sh"
-alias mysql="/Applications/MAMP/Library/bin/mysql"
 
 alias g="git"
 alias p="pwd | pbcopy"
