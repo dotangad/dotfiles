@@ -3,7 +3,7 @@
 	email = mail@angad.dev
 	signingkey = BA87FB758E3920E9
 [gpg]
-	program = gpg
+	program = /usr/bin/gpg2
 [commit]
 	gpgsign = true
 [alias]
