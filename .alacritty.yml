@@ -12,8 +12,7 @@
 #  - /path/to/alacritty.yml
 
 # Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty itself.
+# environment variables. Some entries may override variables set by alacritty itself.
 #env:
   # TERM variable
   #
@@ -816,31 +815,34 @@ colors:
   #print_events: false
 
 
-# Space Duck
+# Colors (Hyper)
 colors:
   # Default colors
   primary:
-    background: '#0f111b'
-    foreground: '#ecf0c1'
+    background: '0x0d0d0d'
+    foreground: '0xffffff'
+  cursor:
+    text: '0xF81CE5'
+    cursor: '0xffffff'
+
   # Normal colors
   normal:
-    black:   '#000000'
-    red:     '#e33400'
-    green:   '#5ccc96'
-    yellow:  '#b3a1e6'
-    blue:    '#00a3cc'
-    magenta: '#f2ce00'
-    cyan:    '#7a5ccc'
-    white:   '#686f9a'
+    black:   '0x000000'
+    red:     '0xfe0100'
+    green:   '0x33ff00'
+    yellow:  '0xfeff00'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xd0d0d0'
 
   # Bright colors
   bright:
-    black:   '#686f9a'
-    red:     '#e33400'
-    green:   '#5ccc96'
-    yellow:  '#b3a1e6'
-    blue:    '#00a3cc'
-    magenta: '#f2ce00'
-    cyan:    '#7a5ccc'
-    white:   '#f0f1ce'
-
+    black:   '0x808080'
+    red:     '0xfe0100'
+    green:   '0x33ff00'
+    yellow:  '0xfeff00'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xFFFFFF'
