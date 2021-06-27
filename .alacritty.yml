@@ -60,7 +60,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -71,7 +71,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Fullscreen
 
   # Window title
   title: terminal
@@ -111,7 +111,10 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: Hack Nerd Font Mono
-    family: JetBrainsMono Nerd Font Mono
+    # family: JetBrainsMono Nerd Font Mono
+    # family: Fira Code Nerd Font Mono
+    family: Victor Mono Nerd Font Mono
+    # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -123,7 +126,10 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: Hack Nerd Font Mono
-    family: JetBrainsMono Nerd Font Mono
+    # family: JetBrainsMono Nerd Font Mono
+    # family: Fira Code Nerd Font Mono
+    family: Victor Mono Nerd Font Mono
+    # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -135,7 +141,10 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: Hack Nerd Font Mono
-    family: JetBrainsMono Nerd Font Mono
+    # family: JetBrainsMono Nerd Font Mono
+    # family: Fira Code Nerd Font Mono
+    family: Victor Mono Nerd Font Mono
+    # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -147,7 +156,10 @@ font:
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: Hack Nerd Font Mono
-    family: JetBrainsMono Nerd Font Mono
+    # family: JetBrainsMono Nerd Font Mono
+    # family: Fira Code Nerd Font Mono
+    family: Victor Mono Nerd Font Mono
+    # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -819,7 +831,7 @@ colors:
 colors:
   # Default colors
   primary:
-    background: '0x0d0d0d'
+    background: '0x000000'
     foreground: '0xffffff'
   cursor:
     text: '0xF81CE5'
