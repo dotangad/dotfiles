@@ -1,11 +1,14 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = BA87FB758E3920E9
+	signingkey = 83ECC4D7A96804C8948D8B1CEF6060F9DDE50CF2
+
 [gpg]
 	program = /usr/bin/gpg2
+
 [commit]
 	gpgsign = true
+
 [alias]
 	co = checkout
 	c = commit -m
@@ -19,7 +22,21 @@
 	l = log --oneline
 	last = log -1
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-[credential]
-	helper = osxkeychain
+
 [color]
 	ui = auto
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
