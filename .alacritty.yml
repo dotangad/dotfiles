@@ -110,10 +110,10 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    # family: Hack Nerd Font Mono
+    family: Hack Nerd Font Mono
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
-    family: Victor Mono Nerd Font Mono
+    # family: Victor Mono Nerd Font Mono
     # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
@@ -125,10 +125,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: Hack Nerd Font Mono
+    family: Hack Nerd Font Mono
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
-    family: Victor Mono Nerd Font Mono
+    # family: Victor Mono Nerd Font Mono
     # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
@@ -140,10 +140,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: Hack Nerd Font Mono
+    family: Hack Nerd Font Mono
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
-    family: Victor Mono Nerd Font Mono
+    # family: Victor Mono Nerd Font Mono
     # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
@@ -155,10 +155,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    # family: Hack Nerd Font Mono
+    family: Hack Nerd Font Mono
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
-    family: Victor Mono Nerd Font Mono
+    # family: Victor Mono Nerd Font Mono
     # family: Monoid Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
@@ -170,9 +170,9 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -191,11 +191,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
-  # Default colors
-  primary:
-    background: '#000000'
-    foreground: '#ffffff'
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#000000'
+#     foreground: '#ffffff'
 
     # Bright and dim foreground colors
     #
@@ -827,34 +827,45 @@ colors:
   #print_events: false
 
 
-# Colors (Hyper)
+# Base16 OceanicNext 256 - alacritty color config
+# https://github.com/voronianski/oceanic-next-color-scheme
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xffffff'
+    background: '0x1b2b34'
+    foreground: '0xc0c5ce'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xF81CE5'
-    cursor: '0xffffff'
+    text: '0x1b2b34'
+    cursor: '0xc0c5ce'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xfe0100'
-    green:   '0x33ff00'
-    yellow:  '0xfeff00'
-    blue:    '0x0066ff'
-    magenta: '0xcc00ff'
-    cyan:    '0x00ffff'
-    white:   '0xd0d0d0'
+    black:   '0x1b2b34'
+    red:     '0xec5f67'
+    green:   '0x99c794'
+    yellow:  '0xfac863'
+    blue:    '0x6699cc'
+    magenta: '0xc594c5'
+    cyan:    '0x5fb3b3'
+    white:   '0xc0c5ce'
 
   # Bright colors
   bright:
-    black:   '0x808080'
-    red:     '0xfe0100'
-    green:   '0x33ff00'
-    yellow:  '0xfeff00'
-    blue:    '0x0066ff'
-    magenta: '0xcc00ff'
-    cyan:    '0x00ffff'
-    white:   '0xFFFFFF'
+    black:   '0x65737e'
+    red:     '0xec5f67'
+    green:   '0x99c794'
+    yellow:  '0xfac863'
+    blue:    '0x6699cc'
+    magenta: '0xc594c5'
+    cyan:    '0x5fb3b3'
+    white:   '0xd8dee9'
+
+  indexed_colors:
+    - { index: 16, color: '0xf99157' }
+    - { index: 17, color: '0xab7967' }
+    - { index: 18, color: '0x343d46' }
+    - { index: 19, color: '0x4f5b66' }
+    - { index: 20, color: '0xa7adba' }
+    - { index: 21, color: '0xcdd3de' }
