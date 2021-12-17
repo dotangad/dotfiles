@@ -1,0 +1,2 @@
+set fish_color_selection a94dbb
+set fish_color_search_match 42c6d9
