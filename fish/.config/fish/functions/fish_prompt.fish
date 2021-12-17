@@ -9,11 +9,11 @@ function fish_prompt --description 'Write out the prompt'
         case insert
             set suffix '>>'
         case replace_one
-            set suffix '^'
+            set suffix 'RR'
         case visual
-            set suffix 'V'
+            set suffix 'VV'
         case '*'
-            echo '?'
+            echo '??'
     end
 
     set -g __fish_git_prompt_show_informative_status 1

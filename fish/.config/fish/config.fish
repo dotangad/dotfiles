@@ -38,5 +38,3 @@ end
 
 # FZF respect .gitignore
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
-
-source colors.fish
