@@ -1,10 +1,10 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = 83ECC4D7A96804C8948D8B1CEF6060F9DDE50CF2
+	signingkey = 7A3BDC35A161D29D4781443B5B66E1D695DD5304
 
 [gpg]
-	program = /usr/bin/gpg2
+	program = /opt/homebrew/bin/gpg
 
 [commit]
 	gpgsign = true
@@ -26,17 +26,17 @@
 [color]
 	ui = auto
 
-# [pager]
-#     diff = delta
-#     log = delta
-#     reflog = delta
-#     show = delta
-# 
-# [delta]
-#     plus-style = "syntax #012800"
-#     minus-style = "syntax #340001"
-#     syntax-theme = Monokai Extended
-#     navigate = true
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
+[delta]
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = Monokai Extended
+	navigate = true
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
