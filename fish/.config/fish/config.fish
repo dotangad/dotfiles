@@ -28,7 +28,7 @@ fish_add_path $HOME/bin
 
 # GPG ioctl error
 # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
-# set -x GPG_TTY (tty)
+set -x GPG_TTY (tty)
 
 function fish_greeting
   printf "\n\n"

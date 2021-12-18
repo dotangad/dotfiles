@@ -6,3 +6,10 @@ fish_add_path /opt/homebrew/opt/mysql-client/bin
 fish_add_path /Users/angad/Library/Python/3.8/bin
 fish_add_path /Users/Shared/DBngin/mysql/8.0.27/bin
 
+# GPG Stuff
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n (pgrep gpg-agent) ]
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+else
+    eval (gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+end
