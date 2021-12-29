@@ -1,4 +1,4 @@
-vim.g.global_extensions = {
+vim.g.coc_global_extensions = {
   'coc-tsserver',
   'coc-lists',
   'coc-json',

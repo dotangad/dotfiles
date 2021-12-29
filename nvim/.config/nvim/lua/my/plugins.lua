@@ -11,40 +11,10 @@ return require('packer').startup(function()
   }
   use {
     'itchyny/lightline.vim',
-    config = function ()
-      vim.cmd [[
-        let g:lightline = {
-          \ 'colorscheme': 'oceanicnext',
-          \ 'mode_map': {
-          \ 'n' : 'N',
-          \ 'i' : 'I',
-          \ 'R' : 'R',
-          \ 'v' : 'V',
-          \ 'V' : 'VL',
-          \ "\<C-v>": 'VB',
-          \ 'c' : 'C',
-          \ 's' : 'S',
-          \ 'S' : 'SL',
-          \ "\<C-s>": 'SB',
-          \ 't': 'T',
-          \ },
-        \ }
-      ]]
-    end
+    config = function () require("my.lightline") end
   }
-  -- use {
-  --   'vim-airline/vim-airline',
-  --   requires = { 'vim-airline/vim-airline-themes' },
-  --   config = function ()
-  --     vim.cmd "let g:airline_theme='oceanicnext'"
-  --   end
-  -- }
-  use {
-    'glepnir/dashboard-nvim',
-    config = function ()
-       vim.cmd "let g:dashboard_default_executive='telescope'"
-    end
-  }
+  use 'mhinz/vim-startify'
+
 
   -- Git integration
   use {
@@ -74,11 +44,7 @@ return require('packer').startup(function()
   use {
     "folke/which-key.nvim",
     config = function()
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require("which-key").setup {}
     end
   }
 
@@ -128,5 +94,4 @@ return require('packer').startup(function()
     branch = "release",
     config = function () require("my.coc") end
   }
-  -- use 'neovim/nvim-lspconfig'
 end)

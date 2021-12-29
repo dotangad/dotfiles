@@ -36,6 +36,7 @@ vim.cmd("cabbrev t tabe")
 
 -- Telescope
 vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<S-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-x>f", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<C-x>d", "<cmd>lua require('telescope.builtin').file_browser()<cr>", {noremap = true})

@@ -20,6 +20,11 @@ require'nvim-tree'.setup {
       error = "",
     }
   },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
+  },
   update_focused_file = {
     enable      = false,
     update_cwd  = false,
