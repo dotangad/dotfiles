@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+## Quickly switch between tmux sessions
+## Intended to run in a floating window, like -
 
 selected=$(tmux list-sessions -F "#{session_name}" | fzf)
 

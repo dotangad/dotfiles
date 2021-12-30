@@ -1,6 +1,5 @@
 vim.cmd [[
   let g:lightline = {
-    \ 'colorscheme': 'oceanicnext',
     \ 'mode_map': {
     \ 'n' : 'N',
     \ 'i' : 'I',

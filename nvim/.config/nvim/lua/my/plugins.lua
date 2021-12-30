@@ -2,11 +2,19 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Aesthetics
+  use 'mhartington/oceanic-next'
   use {
-    'mhartington/oceanic-next',
+    'frenzyexists/aquarium-vim',
     config = function ()
       vim.cmd("set termguicolors")
-      vim.cmd("colorscheme OceanicNext")
+      vim.cmd("colorscheme aquarium")
+      vim.cmd [[
+        " On = 1 (default) | Off = 0
+        let g:aqua_bold = 1
+
+        " On = 1 | Off = 0 (default)
+        let g:aqua_transparency = 1
+      ]]
     end
   }
   use {
@@ -28,7 +36,7 @@ return require('packer').startup(function()
     'TimUntersberger/neogit',
     requires = {
       'nvim-lua/plenary.nvim',
-      'sindrets/diffview.nvim' 
+      'sindrets/diffview.nvim'
     },
     config = function () require("my.neogit") end
   }
