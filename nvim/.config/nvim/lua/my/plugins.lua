@@ -40,6 +40,8 @@ return require('packer').startup(function()
     },
     config = function () require("my.neogit") end
   }
+  use 'kdheepak/lazygit.nvim'
+
 
   -- Treesitter
   use {
@@ -65,7 +67,12 @@ return require('packer').startup(function()
 
   -- Editing
   use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
+  use {
+    'tpope/vim-commentary',
+    config = function ()
+      vim.cmd [[ autocmd FileType typescriptreact setlocal commentstring={/*\ %s\ */} ]]
+    end
+  }
   use 'jiangmiao/auto-pairs'
   use 'gregsexton/MatchTag'
 

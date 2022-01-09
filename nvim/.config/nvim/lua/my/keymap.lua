@@ -49,4 +49,5 @@ vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua require('telescope.builtin'
 
 -- Misc
 vim.api.nvim_set_keymap("n", "<leader>ng", ":Neogit<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>lg", ":LazyGit<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", {noremap = true})
