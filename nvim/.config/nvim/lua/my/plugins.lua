@@ -35,7 +35,7 @@ return require('packer').startup(function()
     config = function () require("my.neogit") end
   }
   use 'kdheepak/lazygit.nvim'
-
+  use 'tpope/vim-fugitive'
 
   -- Treesitter
   use {

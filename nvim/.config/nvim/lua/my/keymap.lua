@@ -23,6 +23,9 @@ vim.api.nvim_set_keymap("n", "<leader>q", ":q<CR>", {noremap = true})
 
 vim.api.nvim_set_keymap("n", "<leader>r", ":e!<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>R", ":so ~/.config/nvim/init.lua<CR>", {noremap = true})
+vim.cmd [[
+  nnoremap <leader>t :r !date "+[\%Y-\%M-\%dT\%H:\%M:\%S\%z]"<CR>
+]]
 
 vim.api.nvim_set_keymap("v", "<tab>", ">gv", {noremap = true})
 vim.api.nvim_set_keymap("v", ">>", ">gv", {noremap = true})
