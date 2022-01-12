@@ -13,5 +13,6 @@ vim.cmd [[
     \ "\<C-s>": 'SB',
     \ 't': 'T',
     \ },
+    \ 'colorscheme': 'iceberg'
   \ }
 ]]

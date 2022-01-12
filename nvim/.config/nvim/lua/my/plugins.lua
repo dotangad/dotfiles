@@ -3,18 +3,12 @@ return require('packer').startup(function()
 
   -- Aesthetics
   use 'mhartington/oceanic-next'
+  use 'frenzyexists/aquarium-vim'
   use {
-    'frenzyexists/aquarium-vim',
+    'cocopon/iceberg.vim',
     config = function ()
       vim.cmd("set termguicolors")
-      vim.cmd("colorscheme aquarium")
-      vim.cmd [[
-        " On = 1 (default) | Off = 0
-        let g:aqua_bold = 1
-
-        " On = 1 | Off = 0 (default)
-        let g:aqua_transparency = 1
-      ]]
+      vim.cmd("colorscheme iceberg")
     end
   }
   use {
