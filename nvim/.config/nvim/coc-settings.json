@@ -23,7 +23,8 @@
     "css",
     "go",
     "php",
-    "rust"
+    "rust"// ,
+    // "sql"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -38,5 +39,10 @@
   },
   "explorer.position": "floating",
   "explorer.icon.enableNerdfont": true,
-  "emmet.includeLanguages": { "javascript": "javascriptreact", "blade": "html" }
+  "emmet.includeLanguages": { "javascript": "javascriptreact", "blade": "html" }//,
+  // "sql.database": "mysql",
+  // "sql.formatOptions": {
+  //   "uppercase": true,
+  //   "linesBetweenQueries": 2
+  // }
 }
