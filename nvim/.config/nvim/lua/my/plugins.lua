@@ -95,8 +95,15 @@ return require('packer').startup(function()
   use 'evanleck/vim-svelte'
   use 'pantharshit00/vim-prisma'
   use 'alampros/vim-styled-jsx'
+
+  -- Prose
   use 'jxnblk/vim-mdx-js'
-  -- use 'plasticboy/vim-markdown'
+  use {
+    'plasticboy/vim-markdown',
+    config = function() require('my.markdown') end
+  }
+  use 'godlygeek/tabular'
+  use 'junegunn/goyo.vim'
 
   -- Web dev
   use 'mattn/emmet-vim'
@@ -106,6 +113,18 @@ return require('packer').startup(function()
   use 'tpope/vim-eunuch'
   use 'editorconfig/editorconfig-vim'
   use 'Pocco81/TrueZen.nvim'
+  use {
+    'junegunn/vim-easy-align',
+    config = function ()
+      vim.cmd [[
+        " Start interactive EasyAlign in visual mode (e.g. vipga)
+        vmap ga <Plug>(EasyAlign)
+
+        " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+        nmap ga <Plug>(EasyAlign)
+      ]]
+    end
+  }
 
   -- LSP
   use {
@@ -113,4 +132,7 @@ return require('packer').startup(function()
     branch = "release",
     config = function () require("my.coc") end
   }
+
+  -- Copilot
+  use 'github/copilot.vim'
 end)

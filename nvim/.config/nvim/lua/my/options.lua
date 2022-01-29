@@ -48,13 +48,3 @@ vim.o.showmatch = true
 vim.o.colorcolumn = ""
 vim.o.cursorline = true
 vim.o.mouse = "a"
-
--- Wrap lines for prose
--- vim.cmd([[
--- augroup prose
---   autocmd!
---   autocmd FileType markdown set wrap
---   autocmd FileType markdown set linebreak
---   autocmd FileType markdown setlocal spell spelllang=en_us
--- augroup end
--- ]])
