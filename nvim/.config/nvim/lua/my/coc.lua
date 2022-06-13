@@ -17,8 +17,10 @@ vim.g.coc_global_extensions = {
   'coc-go',
   'coc-phpls',
   'coc-rls',
-  'coc-tailwindcss'--,
-  -- 'coc-sql'
+  'coc-tailwindcss',
+  'coc-blade',
+  'coc-sql',
+  'coc-angular'
 }
 
 -- Keymap

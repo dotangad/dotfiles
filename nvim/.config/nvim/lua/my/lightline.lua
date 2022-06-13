@@ -36,7 +36,6 @@ vim.cmd [[
     \ "\<C-s>": 'SB',
     \ 't': 'T',
     \ },
-    \ 'colorscheme': 'catppuccin',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste', 'vwordcount' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],

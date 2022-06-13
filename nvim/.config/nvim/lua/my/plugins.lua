@@ -4,26 +4,25 @@ return require('packer').startup(function()
   -- Aesthetics
   use 'mhartington/oceanic-next'
   use 'frenzyexists/aquarium-vim'
-  use 'cocopon/iceberg.vim'
+  use 'catppuccin/nvim'
   use {
-    'catppuccin/nvim',
-    as = 'catppuccin',
+    'cocopon/iceberg.vim',
     config = function ()
       vim.cmd [[
         set termguicolors
-        colorscheme catppuccin
+        colorscheme iceberg
       ]]
     end
   }
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function () require('my.lualine') end
-  }
   -- use {
-  --   'itchyny/lightline.vim',
-  --   config = function () require("my.lightline") end
+  --   'nvim-lualine/lualine.nvim',
+  --   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  --   config = function () require('my.lualine') end
   -- }
+  use {
+    'itchyny/lightline.vim',
+    config = function () require("my.lightline") end
+  }
   use 'mhinz/vim-startify'
 
 
