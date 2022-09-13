@@ -23,6 +23,7 @@ vim.cmd [[
   endfunction
 
   let g:lightline = {
+    \ 'colorscheme': 'powerline',
     \ 'mode_map': {
     \ 'n' : 'N',
     \ 'i' : 'I',

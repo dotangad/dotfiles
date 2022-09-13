@@ -39,7 +39,11 @@
   },
   "explorer.position": "floating",
   "explorer.icon.enableNerdfont": true,
-  "emmet.includeLanguages": { "javascript": "javascriptreact", "blade": "html" }//,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "blade": "html"
+  },
+  "svelte.enable-ts-plugin": true //,
   // "sql.database": "mysql",
   // "sql.formatOptions": {
   //   "uppercase": true,

@@ -32,9 +32,13 @@ set -x GPG_TTY (tty)
 
 function fish_greeting
   printf "\n\n"
-  fortune
+  fortune | lolcat
   printf "\n\n"
 end
 
 # FZF respect .gitignore
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+
+# NVM stuff
+set -x NVM_DIR ~/.nvm
+nvm use default --silent

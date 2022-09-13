@@ -5,12 +5,15 @@ return require('packer').startup(function()
   use 'mhartington/oceanic-next'
   use 'frenzyexists/aquarium-vim'
   use 'catppuccin/nvim'
+  use 'agude/vim-eldar'
+  use 'itchyny/landscape.vim'
+  use 'sainnhe/sonokai'
   use {
     'cocopon/iceberg.vim',
     config = function ()
       vim.cmd [[
         set termguicolors
-        colorscheme iceberg
+        colorscheme sonokai
       ]]
     end
   }
@@ -19,10 +22,10 @@ return require('packer').startup(function()
   --   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   --   config = function () require('my.lualine') end
   -- }
-  use {
-    'itchyny/lightline.vim',
-    config = function () require("my.lightline") end
-  }
+  -- use {
+  --   'itchyny/lightline.vim',
+  --   config = function () require("my.lightline") end
+  -- }
   use 'mhinz/vim-startify'
 
 
@@ -91,7 +94,19 @@ return require('packer').startup(function()
   -- Syntax Highlighting
   use 'sheerun/vim-polyglot'
   use 'styled-components/vim-styled-components'
-  use 'evanleck/vim-svelte'
+  use 'othree/html5.vim'
+  use 'pangloss/vim-javascript'
+  use {
+    'evanleck/vim-svelte',
+    config = function ()
+      vim.cmd [[
+        let g:svelte_preprocessor_tags = [
+          \ { 'name': 'postcss', 'tag': 'style', 'as': 'scss' }
+          \ ]
+        let g:svelte_preprocessors = ['postcss']
+      ]]
+    end
+  }
   use 'pantharshit00/vim-prisma'
   use 'alampros/vim-styled-jsx'
 

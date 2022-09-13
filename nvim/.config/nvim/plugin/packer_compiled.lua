@@ -126,22 +126,26 @@ _G.packer_plugins = {
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/goyo.vim",
     url = "https://github.com/junegunn/goyo.vim"
   },
+  ["html5.vim"] = {
+    loaded = true,
+    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/html5.vim",
+    url = "https://github.com/othree/html5.vim"
+  },
   ["iceberg.vim"] = {
-    config = { "\27LJ\2\n`\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0A        set termguicolors\n        colorscheme iceberg\n      \bcmd\bvim\0" },
+    config = { "\27LJ\2\n`\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0A        set termguicolors\n        colorscheme sonokai\n      \bcmd\bvim\0" },
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/iceberg.vim",
     url = "https://github.com/cocopon/iceberg.vim"
+  },
+  ["landscape.vim"] = {
+    loaded = true,
+    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/landscape.vim",
+    url = "https://github.com/itchyny/landscape.vim"
   },
   ["lazygit.nvim"] = {
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
-  },
-  ["lightline.vim"] = {
-    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.lightline\frequire\0" },
-    loaded = true,
-    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
   },
   neogit = {
     config = { "\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14my.neogit\frequire\0" },
@@ -186,6 +190,11 @@ _G.packer_plugins = {
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
+  },
   tabular = {
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/tabular",
@@ -214,6 +223,11 @@ _G.packer_plugins = {
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-easy-align",
     url = "https://github.com/junegunn/vim-easy-align"
   },
+  ["vim-eldar"] = {
+    loaded = true,
+    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-eldar",
+    url = "https://github.com/agude/vim-eldar"
+  },
   ["vim-eunuch"] = {
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-eunuch",
@@ -223,6 +237,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-markdown"] = {
     config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.markdown\frequire\0" },
@@ -271,6 +290,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-surround"
   },
   ["vim-svelte"] = {
+    config = { "\27LJ\2\nÕ\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0µ\1        let g:svelte_preprocessor_tags = [\n          \\ { 'name': 'postcss', 'tag': 'style', 'as': 'scss' }\n          \\ ]\n        let g:svelte_preprocessors = ['postcss']\n      \bcmd\bvim\0" },
     loaded = true,
     path = "/Users/angad/.local/share/nvim/site/pack/packer/start/vim-svelte",
     url = "https://github.com/evanleck/vim-svelte"
@@ -284,54 +304,54 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: vim-markdown
-time([[Config for vim-markdown]], true)
-try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.markdown\frequire\0", "config", "vim-markdown")
-time([[Config for vim-markdown]], false)
--- Config for: vim-commentary
-time([[Config for vim-commentary]], true)
-try_loadstring("\27LJ\2\nj\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0K autocmd FileType typescriptreact setlocal commentstring={/*\\ %s\\ */} \bcmd\bvim\0", "config", "vim-commentary")
-time([[Config for vim-commentary]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: vim-easy-align
-time([[Config for vim-easy-align]], true)
-try_loadstring("\27LJ\2\ný\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ý\1        \" Start interactive EasyAlign in visual mode (e.g. vipga)\n        vmap ga <Plug>(EasyAlign)\n\n        \" Start interactive EasyAlign for a motion/text object (e.g. gaip)\n        nmap ga <Plug>(EasyAlign)\n      \bcmd\bvim\0", "config", "vim-easy-align")
-time([[Config for vim-easy-align]], false)
--- Config for: iceberg.vim
-time([[Config for iceberg.vim]], true)
-try_loadstring("\27LJ\2\n`\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0A        set termguicolors\n        colorscheme iceberg\n      \bcmd\bvim\0", "config", "iceberg.vim")
-time([[Config for iceberg.vim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18my.treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.gitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: coc.nvim
-time([[Config for coc.nvim]], true)
-try_loadstring("\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\vmy.coc\frequire\0", "config", "coc.nvim")
-time([[Config for coc.nvim]], false)
+-- Config for: vim-commentary
+time([[Config for vim-commentary]], true)
+try_loadstring("\27LJ\2\nj\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0K autocmd FileType typescriptreact setlocal commentstring={/*\\ %s\\ */} \bcmd\bvim\0", "config", "vim-commentary")
+time([[Config for vim-commentary]], false)
 -- Config for: neogit
 time([[Config for neogit]], true)
 try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14my.neogit\frequire\0", "config", "neogit")
 time([[Config for neogit]], false)
--- Config for: lightline.vim
-time([[Config for lightline.vim]], true)
-try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.lightline\frequire\0", "config", "lightline.vim")
-time([[Config for lightline.vim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: vim-easy-align
+time([[Config for vim-easy-align]], true)
+try_loadstring("\27LJ\2\ný\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ý\1        \" Start interactive EasyAlign in visual mode (e.g. vipga)\n        vmap ga <Plug>(EasyAlign)\n\n        \" Start interactive EasyAlign for a motion/text object (e.g. gaip)\n        nmap ga <Plug>(EasyAlign)\n      \bcmd\bvim\0", "config", "vim-easy-align")
+time([[Config for vim-easy-align]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.gitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: vim-svelte
+time([[Config for vim-svelte]], true)
+try_loadstring("\27LJ\2\nÕ\1\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0µ\1        let g:svelte_preprocessor_tags = [\n          \\ { 'name': 'postcss', 'tag': 'style', 'as': 'scss' }\n          \\ ]\n        let g:svelte_preprocessors = ['postcss']\n      \bcmd\bvim\0", "config", "vim-svelte")
+time([[Config for vim-svelte]], false)
+-- Config for: vim-markdown
+time([[Config for vim-markdown]], true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.markdown\frequire\0", "config", "vim-markdown")
+time([[Config for vim-markdown]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: coc.nvim
+time([[Config for coc.nvim]], true)
+try_loadstring("\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\vmy.coc\frequire\0", "config", "coc.nvim")
+time([[Config for coc.nvim]], false)
+-- Config for: iceberg.vim
+time([[Config for iceberg.vim]], true)
+try_loadstring("\27LJ\2\n`\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0A        set termguicolors\n        colorscheme sonokai\n      \bcmd\bvim\0", "config", "iceberg.vim")
+time([[Config for iceberg.vim]], false)
 if should_profile then save_profiles() end
 
 end)
