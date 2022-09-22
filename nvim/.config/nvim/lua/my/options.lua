@@ -48,3 +48,13 @@ vim.o.showmatch = true
 vim.o.colorcolumn = ""
 vim.o.cursorline = true
 vim.o.mouse = "a"
+
+-- Neovide
+if vim.g.neovide then
+  vim.g.neovide_transparency = 1
+  vim.g.neovide_refresh_rate = 60
+  vim.g.neovide_refresh_rate_idle = 5
+  vim.g.neovide_fullscreen = 0
+  vim.g.neovide_cursor_animation_length = 0.08
+  vim.g.neovide_cursor_trail_size = 0
+end
