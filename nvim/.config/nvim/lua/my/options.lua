@@ -56,6 +56,9 @@ vim.opt.ttimeoutlen = 10
 -- Show last command in command line
 vim.opt.showcmd = true
 
+-- Don't show -- INSERT -- in command line
+vim.opt.showmode = false
+
 -- Enhanced command line completion
 vim.opt.wildmenu = true
 
@@ -68,7 +71,7 @@ vim.opt.cursorline = true
 -- Enable mouse in all ('a') modes
 vim.opt.mouse = "a"
 
--- Neovide stuff
+-- Neovide
 if vim.g.neovide then
   vim.g.neovide_refresh_rate = 60
   vim.g.neovide_refresh_rate_idle = 5
@@ -77,3 +80,6 @@ if vim.g.neovide then
   -- Trail size in cursor animation
   vim.g.neovide_cursor_trail_size = 0
 end
+
+-- Fonts
+vim.opt.guifont = "FiraCode Nerd Font:h13"
