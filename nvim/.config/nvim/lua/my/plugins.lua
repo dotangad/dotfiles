@@ -74,11 +74,28 @@ return require('packer').startup(function(use)
   }
   use 'kdheepak/lazygit.nvim'
   -- }}}
-
+  -- Which Key {{{
+  use {
+    "folke/which-key.nvim",
+    config = function() require("which-key").setup {} end
+  }
+  -- }}}
 
   -- Align text along <pattern> -> :Tab /<pattern>
   use 'godlygeek/tabular'
 
   use 'github/copilot.vim'
+
+  -- Syntax highlighting for a bunch of languages
+  use 'sheerun/vim-polyglot'
+  
+  -- Improved JavaScript syntax highlighting
+  use 'pangloss/vim-javascript'
+
+  -- Emmet
+  use 'mattn/emmet-vim'
+
+  -- Blade support
+  use 'jwalton512/vim-blade'
 end)
 
