@@ -99,6 +99,26 @@ return require('packer').startup(function(use)
     config = function () require("my.plugins.treesitter") end
   }
   -- }}}
+  -- LSP and Completion {{{
+  use {
+    'neovim/nvim-lspconfig',
+    config = function () require("my.plugins.lspconfig") end
+  }
+
+  -- Completion
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use {
+    'hrsh7th/nvim-cmp',
+    config = function () require("my.plugins.completion") end
+  }
+
+  -- Snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  -- }}}
 
   -- Align text along <pattern> -> :Tab /<pattern>
   use 'godlygeek/tabular'
@@ -111,10 +131,13 @@ return require('packer').startup(function(use)
   -- Improved JavaScript syntax highlighting
   use 'pangloss/vim-javascript'
 
-  -- Emmet
-  use 'mattn/emmet-vim'
-
   -- Blade support
   use 'jwalton512/vim-blade'
+
+  -- Astro language support
+  use 'wuelnerdotexe/vim-astro'
+
+  -- Prisma Syntax highlighting
+  use 'pantharshit00/vim-prisma'
 end)
 
