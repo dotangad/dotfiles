@@ -40,7 +40,10 @@ return require('packer').startup(function(use)
   -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+    requires = {
+      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'arkav/lualine-lsp-progress', opt = false }
+    },
     config = function() require('my.plugins.lualine') end
   }
   -- }}}
