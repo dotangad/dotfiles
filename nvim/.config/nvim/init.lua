@@ -8,8 +8,7 @@ require('my.plugins')
 ------------
 --- TODO ---
 ------------
--- [ ] Make statusline prettier
+-- [ ] Check out windline -> https://github.com/windwp/windline.nvim
 -- [ ] Global statusline + winbar
--- [ ] LSP mode
--- [ ] Debugging
+-- [ ] Debugging -> https://www.youtube.com/watch?v=0moS8UHupGc
 -- [ ] Terminal mode setup
