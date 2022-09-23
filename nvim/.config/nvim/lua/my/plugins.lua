@@ -33,20 +33,15 @@ return require('packer').startup(function(use)
   use 'mhinz/vim-startify'
 
   -- Theme
-  use {
-    'kaicataldo/material.vim',
-    config = function ()
-      vim.cmd [[
-        set termguicolors
-        colorscheme material
-      ]]
-    end
-  }
+  use 'rktjmp/lush.nvim'
+  use 'metalelf0/jellybeans-nvim'
+  use 'kaicataldo/material.vim'
 
+  -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function () require('my.plugins.lualine') end
+    config = function() require('my.plugins.lualine') end
   }
   -- }}}
   -- NVIM Tree {{{
@@ -55,7 +50,7 @@ return require('packer').startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
       require('my.plugins.nvim-tree')
-      vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", {noremap = true})
+      vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", { noremap = true })
     end
   }
   -- }}}
@@ -63,11 +58,11 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    config = function ()
+    config = function()
       require('my.plugins.telescope')
     end
   }
-  -- }}} 
+  -- }}}
   -- Git -> neogit, gitsigns.nvim, lazygit.nvim {{{
   use {
     'lewis6991/gitsigns.nvim',
@@ -82,7 +77,7 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
       'sindrets/diffview.nvim'
     },
-    config = function () require("my.plugins.neogit") end
+    config = function() require("my.plugins.neogit") end
   }
   use 'kdheepak/lazygit.nvim'
   -- }}}
@@ -96,13 +91,13 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function () require("my.plugins.treesitter") end
+    config = function() require("my.plugins.treesitter") end
   }
   -- }}}
   -- LSP and Completion {{{
   use {
     'neovim/nvim-lspconfig',
-    config = function() require("my.plugins.lspconfig") end
+   config = function() require("my.plugins.lspconfig") end
   }
 
   -- Completion
@@ -130,7 +125,7 @@ return require('packer').startup(function(use)
 
   -- Syntax highlighting for a bunch of languages
   use 'sheerun/vim-polyglot'
-  
+
   -- Improved JavaScript syntax highlighting
   use 'pangloss/vim-javascript'
 
@@ -143,4 +138,3 @@ return require('packer').startup(function(use)
   -- Prisma Syntax highlighting
   use 'pantharshit00/vim-prisma'
 end)
-
