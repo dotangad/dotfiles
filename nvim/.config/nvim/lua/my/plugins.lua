@@ -119,6 +119,16 @@ return require('packer').startup(function(use)
 
   -- Nice pictograms for completion sources, setup in my.plugins.completion
   use 'onsails/lspkind.nvim'
+
+  -- Automatically install language servers
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    config = function()
+      require("mason").setup()
+      require("mason-lspconfig").setup()
+    end
+  }
   -- }}}
 
   -- Align text along <pattern> -> :Tab /<pattern>
