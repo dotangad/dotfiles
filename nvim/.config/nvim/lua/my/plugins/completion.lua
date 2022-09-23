@@ -22,7 +22,27 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  formatting = {
+    format = require 'lspkind'.cmp_format {
+      with_text = true,
+      menu = {
+        buffer = "[buf]",
+        nvim_lsp = "[LSP]",
+        nvim_lua = "[api]",
+        path = "[path]",
+        luasnip = "[snip]",
+        gh_issues = "[issues]",
+        tn = "[TabNine]",
+      },
+    },
+  },
+
+  -- From TJ Devries Take Tuesday video on nvim-cmp
+  experimental = {
+    native_menu = false,
+    ghost_text = false,
+  },
 })
 
 -- Set configuration for specific filetype.

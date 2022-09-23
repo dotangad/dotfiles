@@ -102,7 +102,7 @@ return require('packer').startup(function(use)
   -- LSP and Completion {{{
   use {
     'neovim/nvim-lspconfig',
-    config = function () require("my.plugins.lspconfig") end
+    config = function() require("my.plugins.lspconfig") end
   }
 
   -- Completion
@@ -112,12 +112,15 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use {
     'hrsh7th/nvim-cmp',
-    config = function () require("my.plugins.completion") end
+    config = function() require("my.plugins.completion") end
   }
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+
+  -- Nice pictograms for completion sources, setup in my.plugins.completion
+  use 'onsails/lspkind.nvim'
   -- }}}
 
   -- Align text along <pattern> -> :Tab /<pattern>
