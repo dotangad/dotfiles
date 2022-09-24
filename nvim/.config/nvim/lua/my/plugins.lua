@@ -37,7 +37,13 @@ return require('packer').startup(function(use)
   use 'metalelf0/jellybeans-nvim'
   use 'kaicataldo/material.vim'
 
-  -- Statusline
+  -- Statusline - Staline
+  -- use {
+  --   'tamton-aquib/staline.nvim',
+  --   config = function() require('my.plugins.staline') end
+  -- }
+
+  -- Statusline - Lualine
   use {
     'nvim-lualine/lualine.nvim',
     requires = {

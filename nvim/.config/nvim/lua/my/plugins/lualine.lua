@@ -10,7 +10,8 @@ require('lualine').setup {
     },
     ignore_focus = {},
     always_divide_middle = true,
-    globalstatus = true,
+    -- globalstatus = true,
+    globalstatus = false,
     refresh = {
       statusline = 1000,
       tabline = 1000,
@@ -35,8 +36,10 @@ require('lualine').setup {
   },
   tabline = {},
   winbar = {
-    lualine_a = {'filename'},
-    lualine_b = {'diff', 'diagnostics'},
+    -- lualine_a = {'filename'},
+    -- lualine_b = {'diff', 'diagnostics'},
+    lualine_a = {},
+    lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
@@ -45,7 +48,8 @@ require('lualine').setup {
   inactive_winbar = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { 'filename' },
+    -- lualine_c = { 'filename' },
+    lualine_c = {},
     lualine_x = {},
     lualine_y = {},
     lualine_z = {}
