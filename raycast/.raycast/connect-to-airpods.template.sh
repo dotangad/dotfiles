@@ -21,3 +21,4 @@ fi
 
 # Run the BluetoothConnector command without arguments to see your Airpods' MAC address
 BluetoothConnector --connect {YOUR_AIRPODS_MAC_ADDRESS}
+echo "Airpods connected!"
