@@ -155,3 +155,9 @@ require 'lspconfig'.tailwindcss.setup {
   capabilities = capabilities
 }
 -- }}}
+-- solargraph (Ruby) {{{
+require 'lspconfig'.solargraph.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+-- }}}
