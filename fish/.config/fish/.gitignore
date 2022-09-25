@@ -6,6 +6,9 @@ functions/nvm.fish
 conf.d/fzf.fish 
 conf.d/nvm.fish
 conf.d/z.fish
+conf.d/done.fish
+conf.d/gitnow.fish
+conf.d/gitnow_config.fish
 
 completions/*
 
