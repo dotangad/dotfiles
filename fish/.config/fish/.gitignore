@@ -1,0 +1,12 @@
+functions/_*
+functions/bass.fish
+functions/fisher.fish
+functions/nvm.fish
+
+conf.d/fzf.fish 
+conf.d/nvm.fish
+conf.d/z.fish
+
+completions/*
+
+fish_variables
