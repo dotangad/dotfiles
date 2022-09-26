@@ -156,4 +156,7 @@ return require('packer').startup(function(use)
 
   -- Prisma Syntax highlighting
   use 'pantharshit00/vim-prisma'
+
+  -- Emmet
+  use 'mattn/emmet-vim'
 end)
