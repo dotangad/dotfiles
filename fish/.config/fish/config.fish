@@ -23,4 +23,4 @@ set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # NVM stuff
 set -x NVM_DIR ~/.nvm
-nvm use system --silent
+nvm use "16.17.1" --silent
