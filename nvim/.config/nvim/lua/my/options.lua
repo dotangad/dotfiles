@@ -86,6 +86,6 @@ vim.opt.guifont = "FiraCode Nerd Font:h13"
 -- Aesthetics
 vim.cmd [[
   set termguicolors
-  colorscheme jellybeans-nvim
+  colorscheme monokai-soda
 ]]
 

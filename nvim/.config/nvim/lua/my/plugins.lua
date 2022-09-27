@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
   use 'rktjmp/lush.nvim'
   use 'metalelf0/jellybeans-nvim'
   use 'kaicataldo/material.vim'
+  use { 'jzelinskie/monokai-soda.vim', requires = 'tjdevries/colorbuddy.vim' }
 
   -- Statusline - Staline
   -- use {

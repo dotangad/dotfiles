@@ -17,7 +17,7 @@ function fish_prompt --description 'Write out the prompt'
 
     set -g __fish_git_prompt_char_stateseparator " "
     
-    set -g __fish_git_prompt_color_branch "#888888" --bold
+    set -g __fish_git_prompt_color_branch "#888888"
     set -g __fish_git_prompt_color_dirtystate red --bold
     set -g __fish_git_prompt_color_stagedstate yellow
     set -g __fish_git_prompt_color_invalidstate red --bold
@@ -36,7 +36,7 @@ function fish_prompt --description 'Write out the prompt'
         end
         set suffix '#'
     else
-        set color_cwd "#cb00a9" --bold
+        set color_cwd "#fd971f" --bold
         set suffix '->'
     end
 
@@ -47,6 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 
     printf '%s ' (fish_vcs_prompt)
 
-    set_color normal
+    set_color "#66d9ef" --bold
     echo -n "$suffix "
+    set_color normal
 end
