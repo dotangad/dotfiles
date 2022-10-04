@@ -32,6 +32,7 @@ vim.opt.autoread = true
 -- Show trailing spaces etc
 vim.opt.list = true
 vim.opt.listchars = "tab:> ,trail:·,eol:↩,multispace:·,nbsp:+"
+vim.opt.listchars = "tab:> ,multispace:·"
 
 -- Line numbers
 vim.opt.number = true

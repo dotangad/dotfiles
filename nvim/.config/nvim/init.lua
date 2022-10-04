@@ -11,4 +11,5 @@ require('my.plugins')
 ------------
 -- [ ] Debugging -> https://www.youtube.com/watch?v=0moS8UHupGc
 -- [ ] Terminal mode setup
--- [ ] mason.nvim
+-- [ ] https://github.com/folke/trouble.nvim
+-- [ ] Global find and replace
