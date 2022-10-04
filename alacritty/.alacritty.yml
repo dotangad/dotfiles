@@ -60,7 +60,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -71,7 +71,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Fullscreen
+  startup_mode: Maximized
 
   # Window title
   title: terminal
@@ -110,7 +110,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: VictorMono Nerd Font
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
     # family: Victor Mono Nerd Font Mono
@@ -125,7 +126,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: VictorMono Nerd Font
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
     # family: Victor Mono Nerd Font Mono
@@ -140,7 +142,8 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: VictorMono Nerd Font
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
     # family: Victor Mono Nerd Font Mono
@@ -155,7 +158,8 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font Mono
+    # family: Hack Nerd Font Mono
+    family: VictorMono Nerd Font
     # family: JetBrainsMono Nerd Font Mono
     # family: Fira Code Nerd Font Mono
     # family: Victor Mono Nerd Font Mono
@@ -165,7 +169,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
