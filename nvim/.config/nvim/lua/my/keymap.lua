@@ -35,6 +35,17 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":e!<CR>", {noremap = true})
 -- Reload config
 vim.api.nvim_set_keymap("n", "<leader>R", ":so ~/.config/nvim/init.lua<CR>", {noremap = true})
 
+-- Insert date
+-- vim.api.nvim_set_keymap("n", "<leader>d", ":r !date \"+%Y-%M-%dT%H:%M:%S%z\"<CR>", {noremap = true})
+function MyInsertDate()
+  local pos = vim.api.nvim_win_get_cursor(0)
+  local line = vim.api.nvim_get_current_line()
+  local nline = line:sub(0, pos[2]) .. os.date("{ %a, %d %b %Y, %H%M }") .. line:sub(pos[2] + 1)
+  vim.api.nvim_set_current_line(nline)
+  vim.cmd("normal! o")
+end
+vim.api.nvim_set_keymap("n", "<leader>d", ":lua MyInsertDate()<CR>", {noremap = true})
+
 -- Change indentation in visual/normal mode 
 vim.api.nvim_set_keymap("v", "<tab>", ">gv", {noremap = true})
 vim.api.nvim_set_keymap("v", ">>", ">gv", {noremap = true})
@@ -55,7 +66,6 @@ vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin'
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua require('telescope.builtin').git_status()<cr>", {noremap = true})
-
 -- Nvim Tree
 vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", {noremap = true})
 
