@@ -19,6 +19,8 @@ if ! command -v SwitchAudioSource &> /dev/null; then
   exit 1;
 fi
 
-BluetoothConnector --connect "b8-81-fa-96-3d-d6"
+# 7c-2a-ca-c3-9c-37 - Angad’s AirPods Pro
+# b8-81-fa-96-3d-d6 - Angad's AirPods
+BluetoothConnector --connect "7c-2a-ca-c3-9c-37"
 echo $(SwitchAudioSource -n)
 
