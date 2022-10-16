@@ -29,10 +29,13 @@ vim.opt.swapfile = false
 -- Automatically update files
 vim.opt.autoread = true
 
+-- Project Specific VimRCs
+vim.cmd [[ set exrc ]]
+
 -- Show trailing spaces etc
 vim.opt.list = true
-vim.opt.listchars = "tab:> ,trail:·,eol:↩,multispace:·,nbsp:+"
-vim.opt.listchars = "tab:> ,multispace:·"
+-- vim.opt.listchars = "tab:> ,trail:·,eol:↩,multispace:·,nbsp:+"
+vim.opt.listchars = "tab:> "
 
 -- Line numbers
 vim.opt.number = true
