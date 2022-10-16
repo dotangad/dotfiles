@@ -109,9 +109,9 @@ require 'lspconfig'.emmet_ls.setup({
 require 'lspconfig'.eslint.setup {
   on_attach = on_attach,
   capabilities = capabilities
-  -- Fix all on save (format)
-  -- autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
 }
+-- Fix all on save (format)
+vim.cmd [[ autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll ]]
 -- }}}
 -- sqls {{{
 require 'lspconfig'.sqls.setup {
