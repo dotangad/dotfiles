@@ -13,3 +13,4 @@ require('my.plugins')
 -- [ ] Terminal mode setup
 -- [ ] https://github.com/folke/trouble.nvim
 -- [ ] Global find and replace
+-- [ ] bash script to install LSPs
