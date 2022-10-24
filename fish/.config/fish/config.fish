@@ -7,6 +7,7 @@ set -x TERM xterm-256color
 set -x GOPATH $HOME/Code/go
 set -x GOBIN $HOME/Code/go/bin
 set -x EDITOR "nvim"
+set -x ZK_NOTEBOOK_DIR $HOME/Notes
 
 fish_add_path $GOBIN
 fish_add_path $HOME/dotfiles/scripts
@@ -23,4 +24,4 @@ set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # NVM stuff
 set -x NVM_DIR ~/.nvm
-nvm use "16.17.1" --silent
+nvm use latest --silent

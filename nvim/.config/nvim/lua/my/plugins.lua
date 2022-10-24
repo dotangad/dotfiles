@@ -160,4 +160,10 @@ return require('packer').startup(function(use)
 
   -- Emmet
   use 'mattn/emmet-vim'
+
+  -- ZK
+  use {
+    'mickael-menu/zk-nvim',
+    config = function() require('my.plugins.zk') end
+  }
 end)
