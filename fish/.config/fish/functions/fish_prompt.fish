@@ -37,7 +37,7 @@ function fish_prompt --description 'Write out the prompt'
         set suffix '#'
     else
         set color_cwd "#fd971f" --bold
-        set suffix '->'
+        set suffix '>>'
     end
 
     # PWD
