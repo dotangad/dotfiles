@@ -162,8 +162,16 @@ return require('packer').startup(function(use)
   use 'mattn/emmet-vim'
 
   -- ZK
+  -- use {
+  --   'mickael-menu/zk-nvim',
+  --   config = function() require('my.plugins.zk') end
+  -- }
+
+  -- Obsidian
+  use 'preservim/vim-markdown'
+  use 'godlygeek/tabular'  -- needed by 'preservim/vim-markdown'
   use {
-    'mickael-menu/zk-nvim',
-    config = function() require('my.plugins.zk') end
+    'epwalsh/obsidian.nvim',
+    config = function() require('my.plugins.obsidian') end
   }
 end)
