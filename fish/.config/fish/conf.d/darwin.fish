@@ -20,4 +20,12 @@ switch (uname)
     # GPG ioctl error
     # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
     set -x GPG_TTY (tty)
+
+    # pnpm
+    set -gx PNPM_HOME "/Users/angad/Library/pnpm"
+    set -gx PATH "$PNPM_HOME" $PATH
+    # pnpm end
+    
+    # https://github.com/eclipse/sumo
+    set -x SUMO_HOME $HOME/Code/sumo
 end

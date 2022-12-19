@@ -136,6 +136,14 @@ return require('packer').startup(function(use)
       require("mason-lspconfig").setup()
     end
   }
+
+  use {
+    'mhanberg/elixir.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function ()
+      require("elixir").setup()
+    end
+  }
   -- }}}
 
   -- Align text along <pattern> -> :Tab /<pattern>
@@ -169,7 +177,7 @@ return require('packer').startup(function(use)
 
   -- Obsidian
   use 'preservim/vim-markdown'
-  use 'godlygeek/tabular'  -- needed by 'preservim/vim-markdown'
+  -- use 'godlygeek/tabular'  -- needed by 'preservim/vim-markdown'
   use {
     'epwalsh/obsidian.nvim',
     config = function() require('my.plugins.obsidian') end
