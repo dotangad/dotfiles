@@ -6,6 +6,9 @@ require('my.keymap')
 require('my.plugins')
 -- require('my.statusline')
 
+-- Lua's `index.html` is `init.lua`, so this line looks for the file `dotangad/init.lua`
+-- require('dotangad')
+
 ------------
 --- TODO ---
 ------------

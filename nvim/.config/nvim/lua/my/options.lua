@@ -1,5 +1,6 @@
 -------------
--- Options -- -----------
+-- Options --
+-------------
 vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
