@@ -5,8 +5,8 @@ vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
--- Fold with markers ({{{ }}})
-vim.opt.foldmethod = "marker"
+-- Switch off code folding by default
+vim.opt.foldenable = false
 
 -- Indentation: no tabs, 2 spaces
 -- Visual length of a tab
@@ -31,7 +31,7 @@ vim.opt.swapfile = false
 vim.opt.autoread = true
 
 -- Project Specific VimRCs
-vim.cmd [[ set exrc ]]
+vim.opt.exrc = true
 
 -- Show trailing spaces etc
 vim.opt.list = true
@@ -91,6 +91,5 @@ vim.opt.guifont = "FiraCode Nerd Font:h13"
 -- Aesthetics
 vim.cmd [[
   set termguicolors
-  colorscheme monokai-soda
 ]]
 

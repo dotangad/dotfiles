@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   -- Match tag in markup (HTML/JSX)
   use 'gregsexton/MatchTag'
   -- }}}
+
   -- Aesthetics {{{
   -- Start screen
   use 'mhinz/vim-startify'
@@ -37,12 +38,10 @@ return require('packer').startup(function(use)
   use 'metalelf0/jellybeans-nvim'
   use 'kaicataldo/material.vim'
   use { 'jzelinskie/monokai-soda.vim', requires = 'tjdevries/colorbuddy.vim' }
-
-  -- Statusline - Staline
-  -- use {
-  --   'tamton-aquib/staline.nvim',
-  --   config = function() require('my.plugins.staline') end
-  -- }
+  use {
+      'rose-pine/neovim',
+      as = 'rose-pine',
+  }
 
   -- Statusline - Lualine
   use {
@@ -51,35 +50,29 @@ return require('packer').startup(function(use)
       { 'kyazdani42/nvim-web-devicons', opt = true },
       { 'arkav/lualine-lsp-progress', opt = false }
     },
-    config = function() require('my.plugins.lualine') end
   }
   -- }}}
+
   -- NVIM Tree {{{
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('my.plugins.nvim-tree')
-      vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", { noremap = true })
-    end
   }
   -- }}}
+
   -- Telescope {{{
   use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('my.plugins.telescope')
-    end
   }
   -- }}}
+
   -- Git -> neogit, gitsigns.nvim, lazygit.nvim {{{
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
     },
-    config = function() require("my.plugins.gitsigns") end
   }
   use {
     'TimUntersberger/neogit',
@@ -87,65 +80,59 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
       'sindrets/diffview.nvim'
     },
-    config = function() require("my.plugins.neogit") end
   }
   use 'kdheepak/lazygit.nvim'
   -- }}}
+
   -- Which Key {{{
   use {
     "folke/which-key.nvim",
     config = function() require("which-key").setup {} end
   }
   -- }}}
+
   -- Treesitter {{{
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function() require("my.plugins.treesitter") end
   }
+  use 'nvim-treesitter/playground'
   -- }}}
+
   -- LSP and Completion {{{
   use {
-    'neovim/nvim-lspconfig',
-    config = function() require("my.plugins.lspconfig") end
-  }
+    'VonHeikemen/lsp-zero.nvim',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
-  -- Completion
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use {
-    'hrsh7th/nvim-cmp',
-    config = function() require("my.plugins.completion") end
-  }
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
+      {'onsails/lspkind.nvim'},
 
-  -- Snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-
-  -- Nice pictograms for completion sources, setup in my.plugins.completion
-  use 'onsails/lspkind.nvim'
-
-  -- Automatically install language servers
-  use {
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup()
-    end
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
+    }
   }
 
   use {
     'mhanberg/elixir.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    config = function ()
+    config = function()
       require("elixir").setup()
     end
   }
   -- }}}
 
+  -- Misc {{{
   -- Align text along <pattern> -> :Tab /<pattern>
   use 'godlygeek/tabular'
 
@@ -178,8 +165,7 @@ return require('packer').startup(function(use)
   -- Obsidian
   use 'preservim/vim-markdown'
   -- use 'godlygeek/tabular'  -- needed by 'preservim/vim-markdown'
-  use {
-    'epwalsh/obsidian.nvim',
-    config = function() require('my.plugins.obsidian') end
-  }
+  use 'epwalsh/obsidian.nvim'
+  -- }}}
+
 end)

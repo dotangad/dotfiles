@@ -39,3 +39,13 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
+
+local builtin = require('telescope.builtin')
+
+vim.keymap.set("n", "<leader>p", builtin.find_files, {noremap = true})
+vim.keymap.set("n", "<C-p>", builtin.find_files, {noremap = true})
+vim.keymap.set("n", "<leader>fs", builtin.current_buffer_fuzzy_find, {noremap = true})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {noremap = true})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {noremap = true})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {noremap = true})
+vim.keymap.set("n", "<leader>gs", builtin.git_status, {noremap = true})

@@ -44,7 +44,7 @@ function MyInsertDate()
   vim.api.nvim_set_current_line(nline)
   vim.cmd("normal! o")
 end
-vim.api.nvim_set_keymap("n", "<leader>d", ":lua MyInsertDate()<CR>", {noremap = true})
+-- vim.api.nvim_set_keymap("n", "<leader>d", ":lua MyInsertDate()<CR>", {noremap = true})
 
 -- Change indentation in visual/normal mode 
 vim.api.nvim_set_keymap("v", "<tab>", ">gv", {noremap = true})
@@ -53,23 +53,11 @@ vim.api.nvim_set_keymap("v", "<<", "<gv", {noremap = true})
 vim.api.nvim_set_keymap("n", ">>", ">gv", {noremap = true})
 vim.api.nvim_set_keymap("n", "<<", "<gv", {noremap = true})
 
+-- Move lines in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- Tab management
 vim.api.nvim_set_keymap("n", "L", ":tabn<CR>", {noremap = true})
 vim.api.nvim_set_keymap("n", "H", ":tabp<CR>", {noremap = true})
 vim.cmd("cabbrev t tabe")
-
--- Telescope
-vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<C-0>", "<cmd>ObsidianSearch<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>fs", "<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua require('telescope.builtin').git_status()<cr>", {noremap = true})
--- Nvim Tree
-vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", {noremap = true})
-
--- Git stuff
-vim.api.nvim_set_keymap("n", "<leader>ng", ":Neogit<cr>", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>lg", ":LazyGit<cr>", {noremap = true})

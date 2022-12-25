@@ -17,3 +17,5 @@ vim.keymap.set(
   end,
   { noremap = false, expr = true }
 )
+
+vim.api.nvim_set_keymap("n", "<C-0>", "<cmd>ObsidianSearch<cr>", {noremap = true})

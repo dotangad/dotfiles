@@ -6,11 +6,6 @@ require'nvim-tree'.setup {
   open_on_tab         = true,
   hijack_cursor       = false,
   update_cwd          = true,
-  update_focused_file = {
-    enable = false,
-    update_root = false,
-    ignore_list = {},
-  },
   diagnostics = {
     enable = false,
     icons = {
@@ -48,3 +43,5 @@ require'nvim-tree'.setup {
     }
   }
 }
+
+vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", { noremap = true })
