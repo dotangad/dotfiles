@@ -36,7 +36,7 @@ function fish_prompt --description 'Write out the prompt'
         end
         set suffix '#'
     else
-        set color_cwd "#fd971f" --bold
+        set color_cwd "#c4a7e7" --bold
         set suffix '>>'
     end
 
@@ -47,7 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 
     printf '%s ' (fish_vcs_prompt)
 
-    set_color "#66d9ef" --bold
+    set_color "#e0def4"
     echo -n "$suffix "
     set_color normal
 end

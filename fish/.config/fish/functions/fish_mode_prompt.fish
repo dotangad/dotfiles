@@ -7,7 +7,7 @@ function fish_mode_prompt
       set vi_mode_color red
       set vi_mode_symbol "NO"
     case insert
-      set vi_mode_color "#a6e22e"
+      set vi_mode_color "#f6c177"
       set vi_mode_symbol "::"
     case replace replace_one
       set vi_mode_color "#66d9ef"

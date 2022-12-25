@@ -26,3 +26,5 @@ set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 set -x NVM_DIR ~/.nvm
 nvm use latest --silent
 
+# Theme
+fish_config theme choose "Rosé Pine Moon"
