@@ -1,2 +1,7 @@
-vim.cmd('scriptencoding utf-8')
-vim.cmd('autocmd!')
+vim.cmd [[
+  autocmd!
+]]
+
+require 'dotangad.options'
+require 'dotangad.keymap'
+require 'dotangad.plugins'
