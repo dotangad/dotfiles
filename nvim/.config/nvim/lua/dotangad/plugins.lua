@@ -39,13 +39,7 @@ return require('packer').startup(function(use)
       vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { desc = '[F]ind current [W]ord' })
       vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = '[F]ind [D]iagnostics' })
       vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-      vim.keymap.set('n', '<leader>/', function()
-        -- You can pass additional configuration to telescope to change theme, layout, etc.
-        require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-          winblend = 10,
-          previewer = false,
-        })
-      end, { desc = '[/] Fuzzily search in current buffer' })
+      vim.keymap.set('n', '<leader>:', require('telescope.builtin').commands, { desc = '[:] Telescope commands' })
     end
   }
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
@@ -80,7 +74,7 @@ return require('packer').startup(function(use)
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
       -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
+      { 'j-hui/fidget.nvim', tag = 'legacy' },
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
@@ -194,6 +188,25 @@ return require('packer').startup(function(use)
       ]]
     end
   }
+
+  -- Statusline
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    config = function()
+      require('lualine').setup({
+        options = {
+          theme = 'molokai'
+        }
+      })
+    end
+  }
+
+  -- Guess indentation without much effort - vim-sleuth already does this you fucking idiot
+  -- use {
+  --   'nmac427/guess-indent.nvim',
+  --   config = function() require('guess-indent').setup {} end,
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

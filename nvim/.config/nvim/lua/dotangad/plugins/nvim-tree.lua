@@ -1,15 +1,9 @@
-require'nvim-tree'.setup {
+require 'nvim-tree'.setup {
   disable_netrw       = false,
   hijack_netrw        = true,
-  ignore_ft_on_setup  = {},
   hijack_cursor       = false,
   update_cwd          = true,
-  update_focused_file = {
-    enable = false,
-    update_root = false,
-    ignore_list = {},
-  },
-  diagnostics = {
+  diagnostics         = {
     enable = false,
     icons = {
       hint = "",
@@ -18,7 +12,7 @@ require'nvim-tree'.setup {
       error = "",
     }
   },
-  git = {
+  git                 = {
     enable = true,
     ignore = false,
     timeout = 500,
@@ -28,15 +22,15 @@ require'nvim-tree'.setup {
     update_cwd  = false,
     ignore_list = {}
   },
-  system_open = {
+  system_open         = {
     cmd  = nil,
     args = {}
   },
-  filters = {
+  filters             = {
     dotfiles = false,
     custom = {}
   },
-  view = {
+  view                = {
     width = 35,
     hide_root_folder = false,
     side = 'left',

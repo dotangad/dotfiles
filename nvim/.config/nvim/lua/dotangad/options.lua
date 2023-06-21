@@ -30,6 +30,9 @@ vim.opt.autoread = true
 -- Project Specific VimRCs
 vim.cmd [[ set exrc ]]
 
+-- Don't wrap lines
+vim.opt.wrap = false
+
 -- Show trailing spaces etc
 vim.opt.list = true
 -- vim.opt.listchars = "tab:> ,trail:·,eol:↩,multispace:·,nbsp:+"
