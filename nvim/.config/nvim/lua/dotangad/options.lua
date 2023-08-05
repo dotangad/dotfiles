@@ -19,6 +19,9 @@ vim.opt.autoindent = true
 -- Smart indentation for C-like programs
 vim.opt.smartindent = true
 
+-- Color the 81st column
+vim.opt.colorcolumn = "81"
+
 -- No backups
 vim.opt.backup = false
 vim.opt.writebackup = false
