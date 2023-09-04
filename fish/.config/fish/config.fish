@@ -23,8 +23,8 @@ end
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # NVM stuff
-set -x NVM_DIR ~/.nvm
-nvm use lts/hydrogen --silent
+# set -x NVM_DIR ~/.nvm
+# nvm use lts/hydrogen --silent
 
 # Theme
 fish_config theme choose "Rosé Pine Moon"

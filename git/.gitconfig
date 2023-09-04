@@ -1,7 +1,7 @@
 [user]
 	name = Angad Singh
 	email = mail@angad.dev
-	signingkey = 7A3BDC35A161D29D4781443B5B66E1D695DD5304
+	signingkey = F4F56FFDEC7ECB499651A0312202D68A518B6B01
 
 [gpg]
 	program = /opt/homebrew/bin/gpg

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "uuid-generator",
+  "title": "UUID Generator",
+  "description": "A quick way to generate UUIDs without opening the browser",
+  "icon": "command-icon.png",
+  "author": "jmaeso",
+  "contributors": [
+    "GastroGeek",
+    "pernielsentikaer",
+    "LunaticMuch"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "generate",
+      "title": "Generate UUIDs",
+      "description": "Copy generated UUIDs to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "generateV5",
+      "title": "Generate V5 UUIDs",
+      "description": "Copy generated UUIDs V5 to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "UUID Name",
+          "required": true
+        },
+        {
+          "name": "numberOfUUIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ],
+      "preferences": [
+        {
+          "name": "uuidNamespace",
+          "type": "textfield",
+          "required": false,
+          "default": "",
+          "title": "UUID v5 Namespace",
+          "label": "Namespace",
+          "description": "The namespace for UUID v5"
+        }
+      ]
+    },
+    {
+      "name": "generateUlid",
+      "title": "Generate ULIDs",
+      "description": "Copy generated ULIDs to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfULIDsToGenerate",
+          "type": "text",
+          "placeholder": "1",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "upperCaseLetters",
+      "type": "checkbox",
+      "required": false,
+      "default": false,
+      "title": "Options",
+      "label": "Uppercase Letters",
+      "description": "Should letters be uppercased?"
+    },
+    {
+      "name": "defaultAction",
+      "description": "Set the default action",
+      "type": "dropdown",
+      "required": false,
+      "title": "Default Action",
+      "default": "copy",
+      "data": [
+        {
+          "title": "Copy",
+          "value": "copy"
+        },
+        {
+          "title": "Paste",
+          "value": "paste"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.55.0",
+    "ulidx": "^2.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "^20.4.2",
+    "@types/uuid": "^9.0.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-import": "^2.27.5",
+    "react-devtools": "^4.28.0",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "airtable-dotco",
+  "title": "Airtable Dotco Helper",
+  "description": "Manage Shortlinks at dotco",
+  "icon": "command-icon.png",
+  "author": "kavinvalli",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "create",
+      "title": "Create a Shortlink",
+      "subtitle": "Dotco",
+      "description": "Create a shortlink for dotco",
+      "mode": "view"
+    },
+    {
+      "name": "list",
+      "title": "List Shortlinks",
+      "subtitle": "Dotco",
+      "description": "List all shortlinks at dotco",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "apiKey",
+      "required": true,
+      "title": "API Key",
+      "placeholder": "Enter your airtable api key",
+      "description": "Airtable API Key",
+      "type": "password"
+    },
+    {
+      "name": "baseID",
+      "required": true,
+      "title": "Base ID",
+      "placeholder": "Enter your airtable base id",
+      "description": "Airtable Base ID",
+      "type": "textfield"
+    },
+    {
+      "name": "tableName",
+      "required": true,
+      "title": "Table Name",
+      "placeholder": "Enter your airtable table name",
+      "description": "Airtable Table name",
+      "type": "textfield"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.25.4",
+    "airtable-plus": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
