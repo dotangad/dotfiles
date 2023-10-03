@@ -8,10 +8,12 @@ set -x GOPATH $HOME/Code/go
 set -x GOBIN $HOME/Code/go/bin
 set -x EDITOR "nvim"
 set -x ZK_NOTEBOOK_DIR $HOME/Notes
+# set -x PAGER "nvim -"
 
 fish_add_path $GOBIN
 fish_add_path $HOME/dotfiles/scripts
 fish_add_path $HOME/bin
+fish_add_path $HOME/.rvm/bin
 
 function fish_greeting
   printf "\n\n"
@@ -23,8 +25,14 @@ end
 set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # NVM stuff
-# set -x NVM_DIR ~/.nvm
-# nvm use lts/hydrogen --silent
+set -x NVM_DIR ~/.nvm
+nvm use lts/hydrogen --silent
+
+# pyenv
+pyenv init - | source
+
+# rvm
+rvm default
 
 # Theme
 fish_config theme choose "Rosé Pine Moon"
