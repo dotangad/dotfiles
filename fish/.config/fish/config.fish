@@ -26,7 +26,7 @@ set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # NVM stuff
 set -x NVM_DIR ~/.nvm
-nvm use lts/hydrogen --silent
+nvm use 20 --silent
 
 # pyenv
 pyenv init - | source
@@ -36,3 +36,7 @@ rvm default
 
 # Theme
 fish_config theme choose "Rosé Pine Moon"
+
+# Wasmer
+export WASMER_DIR="/Users/angad/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
