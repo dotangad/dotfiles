@@ -10,12 +10,12 @@ switch (uname)
     fish_add_path /Users/Shared/DBngin/redis/6.2.1/bin
     
     # GPG Stuff
-    if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n (pgrep gpg-agent) ]
-        source ~/.gnupg/.gpg-agent-info
-        export GPG_AGENT_INFO
-    else
-        eval (gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-    end
+    # if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n (pgrep gpg-agent) ]
+    #     source ~/.gnupg/.gpg-agent-info
+    #     export GPG_AGENT_INFO
+    # else
+    #     eval (gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+    # end
     
     # GPG ioctl error
     # https://stackoverflow.com/questions/57591432/gpg-signing-failed-inappropriate-ioctl-for-device-on-macos-with-maven
@@ -23,9 +23,5 @@ switch (uname)
 
     # pnpm
     set -gx PNPM_HOME "/Users/angad/Library/pnpm"
-    set -gx PATH "$PNPM_HOME" $PATH
-    # pnpm end
-    
-    # https://github.com/eclipse/sumo
-    set -x SUMO_HOME $HOME/Code/sumo
+    set -gx PATH "$PNPM_HOME $PATH"
 end
