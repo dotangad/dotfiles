@@ -2,13 +2,13 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_show_informative_status 1
     set -g __fish_git_prompt_showuntrackedfiles 1
     set -g __fish_git_prompt_showdirtystate 1
-    set -g __fish_git_prompt_showupstream "informative"
+    set -g __fish_git_prompt_showupstream informative
     set -g __fish_git_prompt_showstashstate 1
 
     set -g __fish_git_prompt_char_upstream_ahead "↑"
     set -g __fish_git_prompt_char_upstream_behind "↓"
     set -g __fish_git_prompt_char_upstream_prefix " "
-    
+
     set -g __fish_git_prompt_char_stagedstate "●"
     set -g __fish_git_prompt_char_dirtystate "+"
     set -g __fish_git_prompt_char_untrackedfiles "..."
@@ -16,14 +16,14 @@ function fish_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_char_cleanstate "✔"
 
     set -g __fish_git_prompt_char_stateseparator " "
-    
-    set -g __fish_git_prompt_color_branch "#888888"
+
+    set -g __fish_git_prompt_color_branch "#333"
     set -g __fish_git_prompt_color_dirtystate red --bold
     set -g __fish_git_prompt_color_stagedstate yellow
     set -g __fish_git_prompt_color_invalidstate red --bold
     set -g __fish_git_prompt_color_untrackedfiles blue --bold
     set -g __fish_git_prompt_color_cleanstate $fish_clor_normal
-    set -g __fish_git_prompt_color_stashstate "#ffac00" --bold
+    set -g __fish_git_prompt_color_stashstate "#333" --bold
     set -g __fish_git_prompt_color_upstream magenta --bold
 
     set -l color_cwd
@@ -36,7 +36,7 @@ function fish_prompt --description 'Write out the prompt'
         end
         set suffix '#'
     else
-        set color_cwd "#c4a7e7" --bold
+        set color_cwd "#333" --bold
         set suffix '>>'
     end
 
@@ -47,7 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 
     printf '%s ' (fish_vcs_prompt)
 
-    set_color "#e0def4"
+    set_color "#333"
     echo -n "$suffix "
-    set_color normal
+    set_color normal --bold
 end

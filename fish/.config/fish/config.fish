@@ -6,7 +6,7 @@ set -x LANG en_US.UTF-8
 set -x TERM xterm-256color
 set -x GOPATH $HOME/Code/go
 set -x GOBIN $HOME/Code/go/bin
-set -x EDITOR "nvim"
+set -x EDITOR nvim
 set -x ZK_NOTEBOOK_DIR $HOME/Notes
 # set -x PAGER "nvim -"
 
@@ -16,9 +16,9 @@ fish_add_path $HOME/bin
 fish_add_path $HOME/.rvm/bin
 
 function fish_greeting
-  printf "\n\n"
-  fortune | lolcat
-  printf "\n\n"
+    printf "\n\n"
+    fortune
+    printf "\n\n"
 end
 
 # FZF respect .gitignore
