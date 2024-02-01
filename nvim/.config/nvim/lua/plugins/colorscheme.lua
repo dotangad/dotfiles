@@ -1,6 +1,7 @@
 return {
   "craftzdog/solarized-osaka.nvim",
   "nyoom-engineering/oxocarbon.nvim",
+  "wadackel/vim-dogrun",
   { "akinsho/bufferline.nvim", enabled = false },
   { "nvimdev/dashboard-nvim", enabled = false },
   {

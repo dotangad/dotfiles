@@ -7,6 +7,7 @@ return {
     { "<leader>p", "<cmd>Telescope git_files<cr>", desc = "Find Files (Git)" },
     { "<leader>P", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
     { "<leader>dl", "<cmd>Telescope diagnostics<cr>", desc = "List diagnostics" },
+    { "<leader>go", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Go to symbol" },
     -- add a keymap to browse plugin files
     -- {
     --   "<leader>fp",

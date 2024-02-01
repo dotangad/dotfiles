@@ -32,7 +32,7 @@ nvm use 20 --silent
 pyenv init - | source
 
 # rvm
-rvm default
+# rvm default
 
 # Theme
 fish_config theme choose "Rosé Pine Moon"
@@ -40,3 +40,6 @@ fish_config theme choose "Rosé Pine Moon"
 # Wasmer
 export WASMER_DIR="/Users/angad/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# Ocaml
+source /Users/angad/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true

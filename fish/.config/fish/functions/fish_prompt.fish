@@ -17,13 +17,13 @@ function fish_prompt --description 'Write out the prompt'
 
     set -g __fish_git_prompt_char_stateseparator " "
 
-    set -g __fish_git_prompt_color_branch "#333"
+    set -g __fish_git_prompt_color_branch "#888888"
     set -g __fish_git_prompt_color_dirtystate red --bold
     set -g __fish_git_prompt_color_stagedstate yellow
     set -g __fish_git_prompt_color_invalidstate red --bold
     set -g __fish_git_prompt_color_untrackedfiles blue --bold
     set -g __fish_git_prompt_color_cleanstate $fish_clor_normal
-    set -g __fish_git_prompt_color_stashstate "#333" --bold
+    set -g __fish_git_prompt_color_stashstate "#ffac00" --bold
     set -g __fish_git_prompt_color_upstream magenta --bold
 
     set -l color_cwd
@@ -36,7 +36,7 @@ function fish_prompt --description 'Write out the prompt'
         end
         set suffix '#'
     else
-        set color_cwd "#333" --bold
+        set color_cwd "#c4a7e7" --bold
         set suffix '>>'
     end
 
@@ -47,7 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 
     printf '%s ' (fish_vcs_prompt)
 
-    set_color "#333"
+    set_color "#e0def4"
     echo -n "$suffix "
-    set_color normal --bold
+    set_color normal
 end

@@ -9,4 +9,7 @@ return {
     "ibhagwan/fzf-lua", -- optional
   },
   config = true,
+  keys = {
+    { "<leader>ng", "<cmd>Neogit<cr>", desc = "Open neogit" },
+  },
 }
