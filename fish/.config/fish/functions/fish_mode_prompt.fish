@@ -18,5 +18,5 @@ function fish_mode_prompt
     end
 
     # string unescape "$vi_mode_color $vi_mode_symbol \x1b[0m "
-    string unescape "$(set_color --bold "#2977f5")λ $(set_color $vi_mode_color) $vi_mode_symbol $(set_color normal)"
+    string unescape "$(set_color --bold "#2977f5")λ$(set_color $vi_mode_color) $vi_mode_symbol $(set_color normal)"
 end

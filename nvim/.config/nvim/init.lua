@@ -3,5 +3,5 @@ require("config.lazy")
 
 vim.cmd([[
   inoremap jk <Esc>
-  colorscheme dogrun
+  colorscheme oxocarbon
 ]])

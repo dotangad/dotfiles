@@ -14,6 +14,7 @@ fish_add_path $GOBIN
 fish_add_path $HOME/dotfiles/scripts
 fish_add_path $HOME/bin
 fish_add_path $HOME/.rvm/bin
+fish_add_path $HOME/.deno/bin
 
 function fish_greeting
     printf "\n\n"
@@ -43,3 +44,7 @@ export WASMER_DIR="/Users/angad/.wasmer"
 
 # Ocaml
 source /Users/angad/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
+
+fish_add_path /usr/local/smlnj/bin
+
+fish_add_path /Users/angad/.rbenv/versions/3.3.0/bin
