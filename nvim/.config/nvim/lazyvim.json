@@ -1,9 +1,0 @@
-{
-  "extras": [
-    "lazyvim.plugins.extras.lang.ocaml"
-  ],
-  "news": {
-    "NEWS.md": "10960"
-  },
-  "version": 8
-}
