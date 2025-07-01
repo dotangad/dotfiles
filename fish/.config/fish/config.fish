@@ -48,3 +48,12 @@ source /Users/angad/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 fish_add_path /usr/local/smlnj/bin
 
 fish_add_path /Users/angad/.rbenv/versions/3.3.0/bin
+
+source $HOME/.cargo/env.fish
+
+export PATH="/Users/angad/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/angad/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

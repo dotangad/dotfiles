@@ -3,5 +3,9 @@ require("config.lazy")
 
 vim.cmd([[
   inoremap jk <Esc>
-  colorscheme oxocarbon
+  colorscheme retrobox
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
 ]])
